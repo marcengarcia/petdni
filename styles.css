@@ -1,0 +1,58 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 90%;
+    max-width: 1000px;
+    margin: 20px auto;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(4, auto);
+    grid-template-rows: repeat(4, auto);
+}
+ .header{
+    background: blue;
+    color: #fff;
+    grid-column-start: 1;
+    grid-column-end: 5;
+}
+
+.foto {
+    display: flex;
+    grid-column-start: 1;
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+.profilePicture {
+    width: 334px;
+    height: 500px;
+    display: flex;
+    margin-left: auto
+}
+
+.datos {
+    display: flex;
+    grid-column-start: 2;
+    grid-column-end: 5;
+    grid-row: span 1;
+}
+
+.dogData {
+    margin-left: auto
+}
+
+ .footer{
+    background: blue;
+    color: #fff;
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
+
+@media screen and (max-width:768px) {
+    .container .content {
+        grid-column: 1 / -1;
+    }
+}
