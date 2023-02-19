@@ -1,27 +1,52 @@
-.header, .footer {
-    grid-column: 1 / -1;
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column: 1/-1;
+    row-gap: 20px;
+    column-gap: 20px;
+    max-width: 800px;
+    min-width: 500px;
+    margin-right: auto;
+    margin-left: auto;
+    gap: 30px;
+
+}
+
+@media (max-width: 660px) {
+    .container {
+        display: block;
+    }
+    .leftSide {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+.header,
+.footer {
+    grid-column: 1/-1;
     background: blue;
     color: #fff;
-  }
-.profilePicture {
+}
+
+.leftSide {
     width: 334px;
     height: 500px;
-    display: flex;
+    gap: 30px;
 }
 
-.content {
-    justify-content: center;
-    display: flex;
-    gap: 40px;
+.profilePicture {
+    max-width: 100%;
 }
 
-.row1 {
+.rightSide {
     display: grid;
-    gap: 20px;
+    gap: 30px;
 }
 
 .dogData {
-    grid-column: 1/1;
+    grid-column: 1/2;
 }
 
 .humanData {
@@ -29,6 +54,14 @@
 }
 
 .otherData {
+    grid-column: 1/3;
     grid-row: 2/3;
     align-self: center;
 }
+
+.mainContent {
+    max-width: 800px;
+    min-width: 600px;
+}
+
+
