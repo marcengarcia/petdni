@@ -1,6 +1,6 @@
 .container {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 334px 1fr 1fr;
     grid-column: 1/-1;
     row-gap: 20px;
     column-gap: 20px;
@@ -8,20 +8,11 @@
     min-width: 500px;
     margin-right: auto;
     margin-left: auto;
-    gap: 30px;
+    gap: 40px;
 
 }
 
-@media (max-width: 660px) {
-    .container {
-        display: block;
-    }
-    .leftSide {
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-    }
-}
+
 
 .header,
 .footer {
@@ -33,7 +24,8 @@
 .leftSide {
     width: 334px;
     height: 500px;
-    gap: 30px;
+    gap: 20px;
+    padding-left: 10px;
 }
 
 .profilePicture {
@@ -43,6 +35,7 @@
 .rightSide {
     display: grid;
     gap: 30px;
+    padding-right: 10px;
 }
 
 .dogData {
@@ -59,9 +52,23 @@
     align-self: center;
 }
 
-.mainContent {
-    max-width: 800px;
-    min-width: 600px;
+@media (max-width: 660px) {
+    .container {
+        display: block;
+    }
+
+    .leftSide {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .rightSide {
+        margin-top: 40px;
+        justify-content: center;
+    }
+
+    .otherData {
+        justify-self: center;
+    }
 }
-
-
