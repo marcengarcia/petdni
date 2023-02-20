@@ -1,45 +1,58 @@
-
-.photos {
-    width: 300px;
-    height: 600px;
-    grid-row: 1/4;
-    grid-column: 1;
+body {
+    font-family: "Inter", sans-serif;
 }
 
-.profilePicture {
-    height: 100%;
+.photos {
+    float: left;
+    width: 300px;
+}
+
+.profilePicture{
     width: 100%;
 }
 
-.container {
+.accordion {
+    width: 700px;
+    margin: 100px auto;
+}
+
+.section {
+    box-shadow: 0 0 32px rgba(0, 0, 0, 0.1);
+    padding: 24px;
     display: grid;
-    grid-template-columns: 300px auto auto;
-    grid-template-rows: 3;
-    gap: 24px;
+    grid-template-columns: auto 1fr auto;
+    column-gap: 24px;
+    row-gap: 24px;
+}
+
+.number {
+    font-size: 24px;
+    font-weight: bold;
+    color: purple;
+}
+
+.title {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: purple;
+}
+
+.collapsedIcon {
+    padding-top: 25px;
+    width: 24px;
+    height: 24px;
+    stroke: purple;
 }
 
 .dogData {
-    grid-row: 1;
     grid-column: 2;
 }
 
-.humanData{
-    grid-row: 2;
+.humanData {
     grid-column: 2;
 }
 
 .otherData {
-    grid-row: 3;
     grid-column: 2;
-}
-
-.collapsedIcon {
-    text-align: center;
-    width: 24px;
-    height: 24px;
-    stroke: #087f5b;
-}
-
-.tableTitle {
-    text-align: center;
 }
