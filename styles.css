@@ -52,6 +52,11 @@ footer {
     grid-column: 1/-1;
 }
 
+nav {
+    display: flex;
+    justify-content: space-between;
+}
+
 .carousel {
     display: flex;
     align-items: center;
@@ -86,7 +91,7 @@ footer {
     transform: translate(-50px);
 }
 
-.key{
+.key {
     font-weight: bold;
 }
 
