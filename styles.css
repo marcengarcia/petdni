@@ -1,20 +1,57 @@
 body {
     background-color: #dee2e6;
     font-family: "Inter", sans-serif;
-    margin: auto;
+    margin: 10px auto;
     max-width: 1200px;
-    max-height: 700px;
     display: grid;
     align-items: center;
     grid-template-columns: 500px 700px;
     column-gap: 24px;
 }
 
+@media (max-width: 600px) {
+
+    body {
+        display: flex;
+        flex-direction: column;
+
+        max-width: 500px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    header {
+        background-color: #da77f2;
+        width: 500px;
+        height: 50px;
+    }
+
+
+    footer {
+        background-color: #da77f2;
+        width: 500px;
+        height: 50px;
+    }
+
+
+    .carousel {
+        transform: scale(60%);
+    }
+
+    .accordion {
+        max-width: 500px;
+        margin-left: 100px;
+    }
+
+
+
+}
+
 header,
 footer {
     background-color: #da77f2;
     max-width: 1200px;
-    height: 100px;
+    height: 50px;
     grid-column: 1/-1;
 }
 
@@ -22,7 +59,6 @@ footer {
     display: flex;
     align-items: center;
     gap: 24px;
-    /* margin: 100px auto; */
     width: 500px;
     border-radius: 8px;
     grid-column: 1;
@@ -44,9 +80,7 @@ footer {
     font-size: 50px;
     font-weight: bold;
     color: white;
-    text-shadow: 2px 4px 4px rgba(0,0,0,0.9);
-
-
+    text-shadow: 2px 4px 4px rgba(0, 0, 0, 0.9);
 }
 
 .accordion {
@@ -56,7 +90,7 @@ footer {
 }
 
 .btn {
-    background-color: #da77f2;
+    background-color: white;
     border: none;
     height: 40px;
     width: 40px;
@@ -149,15 +183,15 @@ footer {
     left: 50%;
     transform: translate(-50%, -40px);
     bottom: 0;
-
     display: flex;
     gap: 12px;
 }
+
 .dot {
     height: 12px;
     width: 12px;
     background-color: white;
-    border: 2px solid #da77f2;
+    border: 1px solid #da77f2;
     border-radius: 50%;
     cursor: pointer;
 }
