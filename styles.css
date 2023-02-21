@@ -14,8 +14,8 @@ body {
     body {
         display: flex;
         flex-direction: column;
-
-        max-width: 500px;
+        width: 500px;
+        height: 1300px;
         align-items: center;
         justify-content: center;
     }
@@ -35,7 +35,7 @@ body {
 
 
     .carousel {
-        transform: scale(60%);
+        /* transform: scale(60%); */
     }
 
     .accordion {
