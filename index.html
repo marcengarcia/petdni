@@ -8,10 +8,30 @@
     <link rel="stylesheet" href="/styles.css">
     <title>Document</title>
 </head>
+
 <body>
     <header>HEADER</header>
-    <div class="photos">
+    <div class="carousel">
         <img class="profilePicture" src="/resources/images/molly.jpeg" alt="My dog profile picture">
+        <div class="carouselName">Molly</div>
+        <button class="btn btn--left">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" class="btn-icon">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+            </svg>
+        </button>
+        <button class="btn btn--right">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" class="btn-icon">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+            </svg>
+        </button>
+        <div class="dots">
+            <button class="dot dot--fill">&nbsp;</button>
+            <button class="dot">&nbsp;</button>
+            <button class="dot">&nbsp;</button>
+            <button class="dot">&nbsp;</button>
+        </div>
     </div>
     <div class="accordion">
         <div class="section open">
@@ -46,6 +66,10 @@
                     <tr>
                         <td class="key">Chip:</td>
                         <td class="value">Si</td>
+                    </tr>
+                    <tr>
+                        <td class="key">Marcas:</td>
+                        <td class="value">Cicatriz de castracion costado derecho trasero</td>
                     </tr>
                 </table>
             </div>
@@ -121,4 +145,5 @@
     </div>
     <footer>FOOTER</footer>
 </body>
+
 </html>
