@@ -1,9 +1,12 @@
 import './DogData.css'
+import Header from './Header'
+import Footer from './Footer'
 
 
 const DogData = (props) => {
     return (
         <div className='container'>
+            <Header />
             <div className="display-picture">
                 <img src="../images/molly.jpg" alt='dog profile picture' className='profilePicture'></img>
                 <h2 className='dog-name'>{props.name}</h2>
@@ -36,6 +39,7 @@ const DogData = (props) => {
                     </tr>
                 </table>
             </div>
+                        <Footer />
         </div>
     )
 }
