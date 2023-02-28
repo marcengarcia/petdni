@@ -1,11 +1,9 @@
-.container {
-    display: flex;
-    gap: 24px;
+* {
+    margin: 0;
 }
 
 .display-picture {
-    display: flex;
-    flex-direction: column;
+    display: grid;
     width: 300px;
     height: 500px;
     border: 1px solid #ececec;
@@ -14,16 +12,26 @@
     border-radius: 12px;
     align-items: center;
     justify-content: center;
-    position: relative
 }
 
 .profilePicture {
+    grid-area: 1/1;
     width: 100%;
     height: 100%;
 }
+
 .dog-name {
     position: absolute;
     bottom: 0;
+}
+
+.container {
+    max-width: 1200px;
+    max-height: 700px;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: 50px auto auto 50px;
+    gap: 24px;
 }
 
 .table-title {
@@ -38,7 +46,9 @@
 }
 
 .dog-data {
+    postition: absolute;
+    display: grid;
+    grid-area: 2/2;
+    max-width: 400px;
     color: white;
-    display: flex;
-    flex-direction: column;
 }
