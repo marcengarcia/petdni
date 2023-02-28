@@ -2,14 +2,11 @@ import DogData from './DogData'
 import './Display.css'
 import Header from './Header.js'
 import Footer from './Footer'
-import Pictures from './Pictures'
 
 const Display = (props) => {
     return (
-
         <div>
             <Header />
-            <Pictures />
             <div >
                 <DogData
                     name={props.items[0].name}

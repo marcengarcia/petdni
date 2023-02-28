@@ -1,13 +1,15 @@
 import './DogData.css'
-// import Card from '../UI/Card'
 
 
 const DogData = (props) => {
     return (
-        <div>
-            <div className='container'>
-                <h2 className='table-title'>Mis Datos</h2>
-                <table>
+        <div className='container'>
+            <div className="display-picture">
+                <img src="../images/molly.jpg" alt='dog profile picture' className='profilePicture'></img>
+                <h2 className='dog-name'>{props.name}</h2>
+            </div>
+            <div className='dog-data'>
+                <table className='dogTable'> <h2>Mis Datos</h2>
                     <tr>
                         <td className='key'>Edad:</td>
                         <td className='value'>{props.age}</td>

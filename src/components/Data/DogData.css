@@ -3,7 +3,7 @@
 }
 
 .display-picture {
-    display: grid;
+    display: flex;
     width: 300px;
     height: 500px;
     border: 1px solid #ececec;
@@ -12,12 +12,14 @@
     border-radius: 12px;
     align-items: center;
     justify-content: center;
+    position: relative;
 }
 
 .profilePicture {
     grid-area: 1/1;
     width: 100%;
     height: 100%;
+    grid-area: picture;
 }
 
 .dog-name {
@@ -26,19 +28,16 @@
 }
 
 .container {
-    max-width: 1200px;
-    max-height: 700px;
     display: grid;
-    grid-template-columns: auto auto auto;
-    grid-template-rows: 50px auto auto 50px;
+    grid-template-columns: minmax(150px,300px) 1fr 1fr;
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-areas:
+    'header header header'
+    'picture dogData humanData'
+    'picture otherData otherData'
+    'footer footer footer';
     gap: 24px;
-}
-
-.table-title {
-    display: flex;
-    font-weight: bold;
-    justify-content: center;
-    align-items: center;
+    color: white;
 }
 
 .key {
@@ -46,9 +45,9 @@
 }
 
 .dog-data {
-    postition: absolute;
-    display: grid;
-    grid-area: 2/2;
-    max-width: 400px;
+    display: flex;
+    grid-area: 1/2;
     color: white;
+    justify-content: center;
+    align-items: start;
 }
