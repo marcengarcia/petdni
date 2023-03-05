@@ -1,7 +1,46 @@
 .card {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 300px auto auto;
+    grid-template-rows: 50px 250px 250px 50px;
     border-radius: 12px;
-    box-shadow: 0 1px 8px rgba(0,0,0,0.25);
-    gap: 24px;
-} 
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.25);
+    color: white;
+    justify-content: space-around;
+    align-items: start;
+    padding: 12px;
+    margin: 12px;
+    background-color: #4b4b4b;
+    
+}
+
+.header {
+    grid-row: 1;
+    grid-column: 1/-1;
+}
+
+.footer {
+    align-self: self-end;
+    grid-row: 4;
+    grid-column: 1/-1;
+}
+
+.carrousel {
+    float: left;
+    grid-row: 2/3;
+    grid-column: 1;
+}
+
+.dog-data {
+    grid-row: 2;
+    grid-column: 2;
+}
+
+.human-data {
+    padding-top: 15px;
+    grid-row: 2;
+    grid-column: 3;
+}
+
+.other-data {
+    grid-area: 3/2/-1/-1;
+}

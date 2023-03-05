@@ -1,4 +1,5 @@
-import Display from './components/Data/Display';
+
+import Card from './components/UI/Card';
 
 const App = () => {
   const display = [
@@ -14,7 +15,10 @@ const App = () => {
   ]
 
   return (
-    <Display items={display} />
+    <div>
+      <Card/>
+
+    </div>
   )
 }
 

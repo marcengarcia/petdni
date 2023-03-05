@@ -1,9 +1,7 @@
 import './Footer.css'
 
 const Footer = () => {
-    return (
-        <footer>FOOTER</footer>
-    )
+    return <footer>footer</footer>
 }
 
 export default Footer

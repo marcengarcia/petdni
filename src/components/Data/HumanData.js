@@ -1,8 +1,8 @@
-import './DogData.css'
+import './HumanData.css'
 
-const DogData = () => {
-    return <div className='dog-data-container'>
-        <table>Dog Data TAble 
+const HumanData = () => {
+    return <div className='human-data-container'>
+        <table>Human Data TAble
             <tr>
                 <td className='key'>test</td>
                 <td className='value'>tested</td>
@@ -11,4 +11,4 @@ const DogData = () => {
     </div>
 }
 
-export default DogData
+export default HumanData
