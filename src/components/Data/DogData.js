@@ -2,7 +2,7 @@ import './DogData.css'
 
 const DogData = () => {
     return <div className='dog-data-container'>
-        <table>Dog Data TAble 
+        <table className='dog-data-table'>Dog Data TAble 
             <tr>
                 <td className='key'>test</td>
                 <td className='value'>tested</td>
