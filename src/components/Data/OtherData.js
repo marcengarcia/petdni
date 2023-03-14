@@ -5,7 +5,7 @@ import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons'
 const OtherData = () => {
     return (
         <div className='accordion'>
-            <input type="radio" name="accordion" id="third"></input>
+            <input type="radio" name="accordion" id="third"/>
             <label for="third">otros datos</label>
             <div className='content'>other data
             texto textotexto textotexto textotexto textotexto textotexto textotexto textotexto textotexto textotexto textotexto texto 
