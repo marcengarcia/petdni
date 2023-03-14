@@ -1,6 +1,6 @@
 .card {
     display: grid;
-    grid-template-columns: 300px auto auto;
+    grid-template-columns: 300px 1fr 1fr;
     grid-template-rows: 50px 166px 166px 166px 50px;
     border-radius: 12px;
     box-shadow: 0 1px 8px rgba(0, 0, 0, 0.25);
@@ -10,7 +10,11 @@
     padding: 12px;
     margin: 12px;
     background-color: #4b4b4b;
-    
+    gap: 12px;
+}
+
+.expand-icon {
+    float: right;
 }
 
 .header {
@@ -30,8 +34,28 @@
     grid-column: 1;
 }
 
+.content{
+
+}
+
+.dog-data,
+.human-data,
+.other-data {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem;
+    margin: 1rem 0;
+    border: 1px solid #ececec;
+    background-color: #2a2a2a;
+    border-radius: 12px;
+}
+
 .dog-data {
     grid-area: 2/2/-1/-1;
+    overflow: hidden;
+
+
 }
 
 .human-data {
@@ -40,4 +64,42 @@
 
 .other-data {
     grid-area: 4/2/-1/-1;
+}
+
+.accordion{
+    width: 500px;
+}
+
+.accordion .content {
+    background-color: grey;
+    border: 1px solid #ececec;
+    border-radius: 6px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s, padding 0.5s;
+}
+
+.accordion label {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    font-size: 24px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+label::before {
+    content: "+";
+    margin-right: 10px;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+input[type="radio"]{
+    display: none;
+}
+
+.accordion input[type="radio"]:checked + label + .content{
+    max-height: 400px;
+    padding: 10px 10px 20px;
 }

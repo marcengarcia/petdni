@@ -1,14 +1,17 @@
 import './HumanData.css'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons'
 
 const HumanData = () => {
-    return <div className='human-data-container'>
-        <table>Human Data TAble
-            <tr>
-                <td className='key'>test</td>
-                <td className='value'>tested</td>
-            </tr>
-        </table>
-    </div>
+    return (
+        <div className='accordion'>
+            <input type="radio" name="accordion" id="second"></input>
+            <label for="second">datos del humano</label>
+            <div className='content'>datos del humano
+            texto textotexto textotexto textotexto textotexto textotexto textotexto textotexto textotexto textotexto textotexto texto 
+            </div>
+        </div>
+    )
 }
 
 export default HumanData

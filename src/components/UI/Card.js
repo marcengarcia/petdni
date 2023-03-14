@@ -11,9 +11,11 @@ const Card = () => {
         <div className="card">
             <div className="header"><Header /></div>
             <div className="carrousel"><DogPictures /></div>
-            <div className="dog-data"><DogData /></div>
-            <div className="human-data"><HumanData /></div>
-            <div className="other-data"><OtherData /></div>
+            <div className="content">
+                <div className="dog-data"><DogData /></div>
+                <div className="human-data"><HumanData /></div>
+                <div className="other-data"><OtherData /></div>
+            </div>
             <div className="footer"><Footer /></div>
         </div>
     )
