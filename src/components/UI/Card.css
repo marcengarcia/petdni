@@ -100,3 +100,4 @@ input[type="radio"] {
 .accordion input[type="radio"]:checked+label::before {
     content: "-";
 }
+
