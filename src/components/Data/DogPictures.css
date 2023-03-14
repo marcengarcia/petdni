@@ -1,7 +1,20 @@
-.dog-picture-container {
+.carrousel {
     width: 300px;
     height: 500px;
     border: 1px solid white;
     border-radius: 12px;
     color: white;
+    position: relative;
+}
+
+.profile-pictures {
+    width: 100%;
+}
+
+.dog-name{
+    font-size: 34px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
 }
