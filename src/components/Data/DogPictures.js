@@ -5,7 +5,7 @@ import { faCircleArrowLeft, faCircleArrowRight } from '@fortawesome/free-solid-s
 const DogPictures = () => {
     return (
         <div className='carrousel'>
-            <img src='../images/molly.jpg' className='profile-pictures' alt='Profile pictures for the dog' />
+            <img src={require('../images/molly.jpg')} className='profile-pictures' alt='Profile pictures for the dog' />
             <div className='dog-name'>Molly</div>
             <FontAwesomeIcon icon={faCircleArrowLeft} className="arrow-back" />
             <FontAwesomeIcon icon={faCircleArrowRight} className="arrow-forward" />
