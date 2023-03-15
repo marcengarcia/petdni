@@ -1,5 +1,4 @@
 import React from "react"
-import './Slider.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCircleArrowLeft, faCircleArrowRight } from '@fortawesome/free-solid-svg-icons'
 
@@ -26,7 +25,7 @@ function Slider({ pictures }) {
             <div>
                 {pictures.map((slides, index) => {
                     return (
-                        <div className="active" >
+                        <div className="slider" >
                             {actualImage === index && (
                                 <img key={index} src={slides} alt="Profile pictures of the doggo" />
                             )}

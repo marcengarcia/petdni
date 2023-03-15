@@ -1,10 +1,12 @@
 .carrousel {
+    display: flex;
     width: 300px;
     height: 500px;
     border: 1px solid white;
     border-radius: 12px;
     color: white;
     position: relative;
+    align-items: center;
 }
 
 .carrousel img {
@@ -14,7 +16,7 @@
     object-fit: cover;
 }
 
-.arrow-back{
+.arrow-back {
     position: absolute;
     width: 32px;
     height: 32px;
@@ -23,7 +25,7 @@
     cursor: pointer;
 }
 
-.arrow-forward{
+.arrow-forward {
     position: absolute;
     width: 32px;
     height: 32px;
@@ -32,12 +34,11 @@
     cursor: pointer;
 }
 
-.dog-name{
+.dog-name {
     font-size: 34px;
     position: absolute;
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
-
