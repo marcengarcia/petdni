@@ -1,18 +1,27 @@
 import './DogPictures.css'
 import Slider from './Slider'
 
-const slides = [
-    'https://thumbs.dreamstime.com/b/brown-birman-cat-brown-birman-cat-room-119663828.jpg',
-    'https://thumbs.dreamstime.com/b/dog-reading-newspaper-cool-funny-jack-russell-magazine-125398832.jpg',
-    'https://thumbs.dreamstime.com/b/head-study-siberian-tiger-beautiful-close-up-amur-endangered-species-our-largest-big-cat-apex-predator-115561629.jpg',
-]
+const slides = [];
+
+function importAll(r) {
+    r.keys().forEach(key => slides.push(r(key)));
+}
+
+importAll(require.context('../../images/', false, /\.(png|jpe?g|svg)$/));
 
 const name = "Molly"
 
-const DogPictures = (display) => {
+const DogPictures = () => {
     return (
         <div className='carrousel'>
-            <Slider pictures={slides} />
+
+            <Slider pictures={slides}>
+            <div>
+                {slides.map((slides, index) => (
+                    <img src={slides.default} key={index} alt={`image-${index}`} />
+                ))}
+            </div>
+            </Slider>
             <div className='dog-name'>{name}</div>
         </div>
     )
