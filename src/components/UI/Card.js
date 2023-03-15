@@ -6,14 +6,21 @@ import OtherData from '../Data/OtherData';
 import Footer from '../Data/Footer';
 import Header from '../Data/Header';
 
-const Card = () => {
+
+
+
+
+const Card = (props) => {
 
 
 
     return (
         <div className="card">
             <div className="header"><Header /></div>
-            <div className="carrousel"><DogPictures /></div>
+            <div className="carrousel" >
+                <DogPictures />
+                <div className='dog-name'>{props.name}</div>
+            </div>
             <div className="content">
                 <div className="dog-data"><DogData /></div>
                 <div className="human-data"><HumanData /></div>

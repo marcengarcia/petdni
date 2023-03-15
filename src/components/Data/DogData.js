@@ -1,19 +1,20 @@
 import './DogData.css'
 
-let dogData = [
-    {
-        name: 'Molly',
-        age: '2 años',
-        breed: 'Labrador',
-        sex: 'Hembra',
-        neutered: 'Si',
-        vaxxed: 'Si',
-        chipped: 'Si',
-        other: ''
-    },
-]
+
 
 const DogData = () => {
+    let dogData = [
+        {
+            name: 'Molly',
+            age: '2 años',
+            breed: 'Labrador',
+            sex: 'Hembra',
+            neutered: 'Si',
+            vaxxed: 'Si',
+            chipped: 'Si',
+            other: 'No'
+        },
+    ]
     return (
         <div className='accordion'>
             <input type="radio" name="accordion" id="first" />
@@ -22,28 +23,26 @@ const DogData = () => {
                 <table className='content-table'>
                     <thead >
                         <tr className='table-header'>
-                            <th>Nombre</th>
-                            <th>Edad</th>
-                            <th>Raza</th>
-                            <th>Sexo</th>
-                            <th>Castrada</th>
-                            <th>Vacunas al Dia</th>
-                            <th>Chippeada</th>
-                            <th>Otro</th>
+                            <th>Nombre:</th>
+                            <th>Edad:</th>
+                            <th>Raza:</th>
+                            <th>Sexo:</th>
+                            <th>Castrada:</th>
+                            <th>Vacunas al Dia:</th>
+                            <th>Chippeada:</th>
+                            <th>Otro:</th>
                         </tr>
                         <tbody>
-                            {dogData.map(dd => (
-                                <tr key={dd.id}>
-                                    <td>{dd.name}</td>
-                                    <td>{dd.age}</td>
-                                    <td>{dd.breed}</td>
-                                    <td>{dd.sex}</td>
-                                    <td>{dd.neutered}</td>
-                                    <td>{dd.vaxxed}</td>
-                                    <td>{dd.chipped}</td>
-                                    <td>{dd.other}</td>
-                                </tr>
-                            ))}
+                            <tr key={dogData.id}>
+                                <td>{dogData[0].name}</td>
+                                <td>{dogData[0].age}</td>
+                                <td>{dogData[0].breed}</td>
+                                <td>{dogData[0].sex}</td>
+                                <td>{dogData[0].neutered}</td>
+                                <td>{dogData[0].vaxxed}</td>
+                                <td>{dogData[0].chipped}</td>
+                                <td>{dogData[0].other}</td>
+                            </tr>
                         </tbody>
                     </thead>
                 </table>

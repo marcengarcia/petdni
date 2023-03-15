@@ -1,7 +1,7 @@
-
 import Card from './components/UI/Card';
 
-const App = () => {
+
+const App = (props) => {
   
 
   return (
