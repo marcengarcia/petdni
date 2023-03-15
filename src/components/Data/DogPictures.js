@@ -1,15 +1,18 @@
 import './DogPictures.css'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCircleArrowLeft, faCircleArrowRight } from '@fortawesome/free-solid-svg-icons'
+import Slider from './Slider'
 
+const slides = [
+    'https://thumbs.dreamstime.com/b/dog-reading-newspaper-cool-funny-jack-russell-magazine-125398832.jpg',
+    'https://thumbs.dreamstime.com/b/brown-birman-cat-brown-birman-cat-room-119663828.jpg',
+    'https://thumbs.dreamstime.com/b/head-study-siberian-tiger-beautiful-close-up-amur-endangered-species-our-largest-big-cat-apex-predator-115561629.jpg',
+
+]
 
 const DogPictures = () => {
     return (
         <div className='carrousel'>
-            <img src={require('../../images/molly1.jpg')} className='profile-pìctures' alt='Profile picture of the doggo'></img>
+            <Slider pictures={slides} />
             <div className='dog-name'>Molly</div>
-            <FontAwesomeIcon icon={faCircleArrowLeft} className="arrow-back" />
-            <FontAwesomeIcon icon={faCircleArrowRight} className="arrow-forward" />
         </div>
     )
 }

@@ -7,6 +7,9 @@ import Footer from '../Data/Footer';
 import Header from '../Data/Header';
 
 const Card = () => {
+
+
+
     return (
         <div className="card">
             <div className="header"><Header /></div>
