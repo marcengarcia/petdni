@@ -19,9 +19,9 @@ const DogData = () => {
             <input type="radio" name="accordion" id="first" />
             <label for="first">datos del perruno</label>
             <div className='content' >
-                <table>
-                    <thead>
-                        <tr>
+                <table className='content-table'>
+                    <thead >
+                        <tr className='table-header'>
                             <th>Nombre</th>
                             <th>Edad</th>
                             <th>Raza</th>
