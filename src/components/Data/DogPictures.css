@@ -6,14 +6,15 @@
     border-radius: 12px;
     color: white;
     position: relative;
-    align-items: center;
+    align-text: center;
+    justify-content: center;
 }
 
 .carrousel img {
-    width: 100%;
-    height: 100%;
+    width: 298px;
+    height: 498px;
+    object-fit: cover; 
     border-radius: 12px;
-    object-fit: cover;
 }
 
 .arrow-back {
