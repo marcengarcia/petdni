@@ -7,7 +7,7 @@ function Slider({ pictures }) {
     const [actualImage, setActualImage] = React.useState(0)
     const imageAmount = pictures?.length
 
-    if (!Array.isArray(pictures) || imageAmount == 0)
+    if (!Array.isArray(pictures) || imageAmount === 0)
         return
 
     const nextImage = () => {
@@ -40,5 +40,4 @@ function Slider({ pictures }) {
 }
 
 export default Slider
-
 
