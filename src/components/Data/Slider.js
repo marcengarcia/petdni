@@ -17,7 +17,7 @@ function Slider({ pictures }) {
     }
 
     const prevImage = () => {
-        setActualImage(actualImage === 0 ? actualImage - 1 : actualImage - 1)
+        setActualImage(actualImage === 0 ? imageAmount - 1 : actualImage - 1)
     }
 
 
@@ -27,7 +27,7 @@ function Slider({ pictures }) {
             <div>
                 {pictures.map((slides, index) => {
                     return (
-                        <div className="slide active" >
+                        <div className="active" >
                             {actualImage === index && (
                                 <img key={index} src={slides} alt="Profile pictures of the doggo" />
                             )}
