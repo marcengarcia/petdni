@@ -2,6 +2,7 @@ import React from "react"
 import './Slider.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCircleArrowLeft, faCircleArrowRight } from '@fortawesome/free-solid-svg-icons'
+import { act } from "react-dom/test-utils"
 
 function Slider({ pictures }) {
 
@@ -11,13 +12,12 @@ function Slider({ pictures }) {
     if (!Array.isArray(pictures) || imageAmount == 0)
         return
 
-        //Este boton no funciona
     const nextImage = () => {
-        setActualImage(actualImage === imageAmount -1 ? 0 : actualImage + 1)
+        setActualImage(actualImage === imageAmount - 1 ? 0 : actualImage + 1)
     }
 
     const prevImage = () => {
-        setActualImage(actualImage ===! imageAmount - 1 ? 0 : actualImage - 1)
+        setActualImage(actualImage === 0 ? actualImage - 1 : actualImage - 1)
     }
 
 
@@ -27,7 +27,7 @@ function Slider({ pictures }) {
             <div>
                 {pictures.map((slides, index) => {
                     return (
-                        <div>
+                        <div className="slide active" >
                             {actualImage === index && (
                                 <img key={index} src={slides} alt="Profile pictures of the doggo" />
                             )}
