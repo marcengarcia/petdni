@@ -1,7 +1,5 @@
 import './HumanData.css'
 
-
-
 const HumanData = () => {
 
     let humanData = [

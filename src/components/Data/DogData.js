@@ -1,7 +1,5 @@
 import './DogData.css'
 
-
-
 const DogData = () => {
     let dogData = [
         {
@@ -17,10 +15,10 @@ const DogData = () => {
     ]
     return (
         <div className='accordion'>
-            <input type="radio" name="accordion" id="first" />
+            <input type="radio" name="accordion" id="first" defaultChecked/>
             <label for="first">datos del perruno</label>
             <div className='content'>
-            <table>
+                <table>
                     <tr>
                         <td class="highlight"><div></div></td>
                         <td>Nombre:</td>
