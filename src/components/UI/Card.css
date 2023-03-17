@@ -43,7 +43,7 @@ table {
 }
 
 .carrousel {
-    float: left;
+
     grid-row: 2/3;
     grid-column: 1;
 }
@@ -69,7 +69,7 @@ td.highlight div {
     border-radius: 4px;
     background-color: white;
     transition: all 0.2s ease-in-out;
-} 
+}
 
 td.value {
     padding: 2px 50px;
@@ -146,4 +146,29 @@ input[type="radio"] {
 
 .accordion input[type="radio"]:checked+label::before {
     content: "-";
+}
+
+@media (max-width: 740px) {
+    .card {
+        display: grid;
+        min-width: 350px;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, auto);
+    }
+
+    header {
+        grid-row: 1;
+    }
+
+    footer {
+
+        grid-row: 4;
+    }
+
+    .carrousel {
+        place-self: center;
+    }
+    .content {
+        max-width: auto;
+    }
 }
