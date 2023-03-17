@@ -7,7 +7,7 @@ const HumanData = () => {
     let humanData = [
         {
             name: 'Marce',
-            phone: '+555 1234567890',
+            phone: '+54 291 511 1033',
             instagram: '@marcengarcia',
             twitter: '@marcengarcia',
             Facebook: '@marcengarcia',
@@ -20,27 +20,43 @@ const HumanData = () => {
             <input type="radio" name="accordion" id="second" />
             <label for="second">datos del humano</label>
             <div className='content'>
-                <table className='content-table'>
-                    <thead >
-                        <tr className='table-header'>
-                            <th>Nombre:</th>
-                            <th>Telefono:</th>
-                            <th>Instagram:</th>
-                            <th>Twitter:</th>
-                            <th>Facebook:</th>
-                            <th>Otro:</th>
-                        </tr>
-                        <tbody>
-                                <tr key={humanData.id}>
-                                    <td>{humanData[0].name}</td>
-                                    <td>{humanData[0].phone}</td>
-                                    <td>{humanData[0].instagram}</td>
-                                    <td>{humanData[0].twitter}</td>
-                                    <td>{humanData[0].Facebook}</td>
-                                    <td>{humanData[0].other}</td>
-                                </tr>
-                        </tbody>
-                    </thead>
+                <table>
+                    <tr>
+                        <td class="highlight"><div></div></td>
+                        <td>Nombre:</td>
+                        <td className='value'>{humanData[0].name}</td>
+                        <td class="highlight"><div></div></td>
+                    </tr>
+                    <tr>
+                        <td class="highlight"><div></div></td>
+                        <td>Telefono:</td>
+                        <td className='value'>{humanData[0].phone}</td>
+                        <td class="highlight"><div></div></td>
+                    </tr>
+                    <tr>
+                        <td class="highlight"><div></div></td>
+                        <td>Instagram:</td>
+                        <td className='value'>{humanData[0].instagram}</td>
+                        <td class="highlight"><div></div></td>
+                    </tr>
+                    <tr>
+                        <td class="highlight"><div></div></td>
+                        <td>Twitter:</td>
+                        <td className='value'>{humanData[0].twitter}</td>
+                        <td class="highlight"><div></div></td>
+                    </tr>
+                    <tr>
+                        <td class="highlight"><div></div></td>
+                        <td>Facebook:</td>
+                        <td className='value'>{humanData[0].Facebook}</td>
+                        <td class="highlight"><div></div></td>
+                    </tr>
+                    <tr>
+                        <td class="highlight"><div></div></td>
+                        <td>Otro:</td>
+                        <td className='value'>{humanData[0].other}</td>
+                        <td class="highlight"><div></div></td>
+                    </tr>
                 </table>
             </div>
         </div>

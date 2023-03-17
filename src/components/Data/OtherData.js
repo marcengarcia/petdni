@@ -19,7 +19,7 @@ const OtherData = () => {
                         </tr>
                         <tbody>
                             <tr key={otherData.id}>
-                                <td>{otherData[0].otherInfo}</td>
+                                <td className='value'>{otherData[0].otherInfo}</td>
                             </tr>
                         </tbody>
                     </thead>

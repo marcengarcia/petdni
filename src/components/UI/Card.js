@@ -11,9 +11,6 @@ import Header from '../Data/Header';
 
 
 const Card = (props) => {
-
-
-
     return (
         <div className="card">
             <div className="header"><Header /></div>
