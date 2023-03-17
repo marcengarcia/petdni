@@ -21,7 +21,7 @@ function Slider({ pictures }) {
 
 
     return (
-        <div>
+        <div className="separator">
             < FontAwesomeIcon icon={faCircleArrowLeft} className="arrow-back" onClick={prevImage} />
             <div>
                 {pictures.map((slides, index) => {

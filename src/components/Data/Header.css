@@ -1,4 +1,81 @@
-header {
-    color: black;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --clr: #222327
+}
+
+nav {
+    display: block;
+    justify-content: center;
+    align-items: center;
+    min-height: 50px;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+.navigation {
+    display: block;
+    width: 1fr;
+    height: 50px;
     background-color: white;
+    padding-bottom: 20px;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.navigation ul {
+    display: flex;
+    width: auto;
+    justify-content: space-evenly;
+}
+
+.navigation ul li {
+    position: relative;
+    list-style: none;
+    width: auto;
+    height: 50px;
+    z-index: 1;
+}
+
+.navigation ul li a {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    font-weight: 500;
+}
+
+.navigation ul li a .icon {
+    position: relative;
+    line-height: 55px;
+    font-size: 1.5em;
+    text-align: center;
+    transition: 0.5s;
+    color: var(--clr);
+}
+
+.navigation ul li:hover a .icon {
+    transform: translateY(20px);
+}
+
+.navigation ul li a .text {
+    position: absolute;
+    color: var(--clr);
+    font-weight: 400;
+    font-size: 0.75em;
+    letter-spacing: 0.05em;
+    transition: 0.5s;
+    opacity: 0;
+    transform: translateY(-12px);
+}
+
+.navigation ul li:hover a .text {
+    opacity: 1;
+
 }
