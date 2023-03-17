@@ -19,7 +19,6 @@ const DogPictures = () => {
                     ))}
                 </div>
             </Slider>
-   
         </div>
     )
 }
