@@ -1,24 +1,16 @@
 import './Header.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faHouseChimney, faAddressCard, faMessage, faRightFromBracket } from '@fortawesome/free-solid-svg-icons'
+import { faPaw, faMessage, faRightFromBracket } from '@fortawesome/free-solid-svg-icons'
 
 const Header = () => {
     return (
         <nav>
             <div className='navigation'>
                 <ul>
-                    <li className='list'>
+                    <li className='list active'>
                         <a href="#">
                             <span className='icon'>
-                                <FontAwesomeIcon icon={faHouseChimney} />
-                            </span>
-                            <span className='text'>Inicio</span>
-                        </a>
-                    </li>
-                    <li className='list'>
-                        <a href="#">
-                            <span className='icon'>
-                                <FontAwesomeIcon icon={faAddressCard} />
+                            <FontAwesomeIcon icon={faPaw} />
                             </span>
                             <span className='text'>Perfil</span>
                         </a>
@@ -28,7 +20,7 @@ const Header = () => {
                             <span className='icon'>
                                 <FontAwesomeIcon icon={faMessage} />
                             </span>
-                            <span className='text'>Messages</span>
+                            <span className='text'>Mensajes</span>
                         </a>
                     </li>
                     <li className='list'>
@@ -36,9 +28,11 @@ const Header = () => {
                             <span className='icon'>
                                 <FontAwesomeIcon icon={faRightFromBracket} />
                             </span>
-                            <span className='text'>Sign Out</span>
+                            <span className='text'>Salir</span>
                         </a>
                     </li>
+                    <div className='indicator'>
+                    </div>
                 </ul>
             </div>
         </nav>

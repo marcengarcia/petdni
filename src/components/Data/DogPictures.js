@@ -12,7 +12,7 @@ importAll(require.context('../../images/', false, /\.(png|jpe?g|svg)$/));
 const DogPictures = () => {
     return (
         <div className='carrousel'>
-            <Slider pictures={slides} className='carrouselFrame'>
+            <Slider pictures={slides}>
                 <div>
                     {slides.map((slides, index) => (
                         <img src={slides.default} key={index} alt={`image-${index}`} />
