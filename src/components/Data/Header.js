@@ -8,16 +8,16 @@ const Header = () => {
     const [activeIcon, setActiveIcon] = useState();
 
     const handleIconClick = (iconName) => {
-      setActiveIcon(iconName);
+        setActiveIcon(iconName);
     };
     return (
         <nav>
             <div className='navigation' >
                 <ul>
-                    <li  onClick={() => handleIconClick('faPaw')} className={activeIcon === 'faPaw' ? 'active' : ''} >
+                    <li onClick={() => handleIconClick('faPaw')} className={activeIcon === 'faPaw' ? 'active' : ''} >
                         <a href="#">
                             <span className='icon'>
-                            <FontAwesomeIcon icon={faPaw} />
+                                <FontAwesomeIcon icon={faPaw} />
                             </span>
                             <span className='text'>Perfil</span>
                         </a>
