@@ -15,6 +15,7 @@
     height: 498px;
     object-fit: cover; 
     border-radius: 12px;
+    cursor: move;
 }
 
 .arrow-back {

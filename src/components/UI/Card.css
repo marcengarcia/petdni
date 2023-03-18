@@ -149,6 +149,7 @@ input[type="radio"] {
 @media (max-width: 740px) {
     .card {
         display: grid;
+        max-width: 1fr;
         min-width: 350px;
         grid-template-columns: 1fr;
         grid-template-rows: repeat(4, auto);
@@ -163,8 +164,9 @@ input[type="radio"] {
         grid-row: 4;
     }
 
-    .carrousel {
-        place-self: center;
+    .slider-component {
+        display: flex;
+        justify-content:center;
     }
 
     .content {
