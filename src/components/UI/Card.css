@@ -37,7 +37,6 @@ table {
 
 .footer {
     max-width: 1000px;
-    align-self: self-end;
     grid-row: 5;
     grid-column: 1/-1;
 }
@@ -106,6 +105,8 @@ tr:hover td.highlight div {
 }
 
 .content {
+    margin: 0;
+    padding: 0;
     max-width: 400px;
 }
 
