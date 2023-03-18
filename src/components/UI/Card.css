@@ -170,6 +170,8 @@ input[type="radio"] {
     }
 
     .content {
-        max-width: auto;
+       display: flex;
+       flex-direction: column;
+       margin: 0 auto;
     }
 }
