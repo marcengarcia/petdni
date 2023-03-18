@@ -76,7 +76,7 @@ nav {
     font-size: 15px;
     opacity: 0;
     transition: 0.5s;
-    transform: translateY(31px);
+    transform: translateY(29px);
 }
 
 .navigation ul li.active a .text {
@@ -92,7 +92,7 @@ nav {
     border-radius: 50%;
     background-color: white;
     border: 6px solid var(--clr);
-    transition: 0.35s;
+    transition: 0.30s;
     opacity: 0;
 }
 

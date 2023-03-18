@@ -38,11 +38,9 @@ const Header = () => {
                             <span className='text'>Salir</span>
                         </a>
                     </li>
-                    <div className='indicator'>
-                    </div>
+                    <div className='indicator'></div>
                 </ul>
             </div>
-            <script>function activeLink</script>
         </nav>
     )
 }
