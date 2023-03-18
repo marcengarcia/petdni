@@ -60,12 +60,13 @@ nav {
     text-align: center;
     justify-content: center;
     transition: 0.5s;
-    color: var(--clr);
+    color: white;
     transform: translateY(-12px);
     z-index: 1;
 }
 
 .navigation ul li.active a .icon {
+    color: var(--clr);
     transform: translateY(18px);
     transition: ease-in-out;
 }
@@ -119,15 +120,17 @@ nav {
     box-shadow: -2px 12px 0 0 var(--clr);
 }
 
-.navigation ul li:nth-child(1).active ~ .indicator{
+.navigation ul li:nth-child(1).active~.indicator {
     transform: translate(82px, 53px);
     opacity: 1;
 }
-.navigation ul li:nth-child(2).active ~ .indicator{
+
+.navigation ul li:nth-child(2).active~.indicator {
     transform: translate(297px, 53px);
     opacity: 1;
 }
-.navigation ul li:nth-child(3).active ~ .indicator{
+
+.navigation ul li:nth-child(3).active~.indicator {
     transform: translate(511px, 53px);
     opacity: 1;
 }
