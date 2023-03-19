@@ -8,7 +8,7 @@ const PORT = process.env.PORT || 5000
 http.createServer(function (req, res) {
     var q = url.parse(req.url, true)
     var filename = "." + q.pathname
-    if (filename == './') { filename = './index' }
+    if (filename == './') { filename = './public/index' }
     filename = filename + ".html"
     fs.readFile(filename, function (err, data) {
         if (err) {
