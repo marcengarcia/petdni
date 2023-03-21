@@ -12,9 +12,8 @@ const Profile = () => {
             <div className="carrousel"> <Slider />AGREGAR IMAGEN</div>
             <div className='accordion'>
                 <div className="dog-data">
-                    <input type="radio" name="accordion" id="first" defaultChecked/>
-<div>                    <label for="first">datos del perruno</label>
-                    <button className="save-data">Guardar</button></div>
+                    <input type="radio" name="accordion" id="first" defaultChecked />
+                    <label for="first">datos del perruno</label>
                     <div className='content'>
                         <table>
                             <tr>
@@ -66,8 +65,8 @@ const Profile = () => {
                                 <td class="highlight"><div></div></td>
                             </tr>
                         </table>
-                    </div >
-
+                        <button className="save-data">Guardar</button>
+                    </div>
 
                 </div>
                 <div className='human-data'>
@@ -112,6 +111,7 @@ const Profile = () => {
                                 <td class="highlight"><div></div></td>
                             </tr>
                         </table>
+                        <button className="save-data">Guardar</button>
                     </div>
                 </div>
 
@@ -130,14 +130,14 @@ const Profile = () => {
                                     </tr>
                                 </tbody>
                             </thead>
+                            <button className="save-data">Guardar</button>
                         </table>
                     </div>
                 </div>
-            </div >
-            <div className="footer"> <Footer />
             </div>
-            </div>
-            )
+            <div className="footer"> <Footer /></div>
+        </div>
+    )
 }
 
-            export default Profile;
+export default Profile;

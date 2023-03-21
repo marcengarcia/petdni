@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes as Switch, Route, Link } from 'react-router-dom'
+import { BrowserRouter as Router, Routes as Switch, Route } from 'react-router-dom'
 
 import Pets from './components/UI/Pets';
 import Profile from './components/UI/Profile';

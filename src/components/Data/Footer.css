@@ -10,7 +10,7 @@ footer {
 }
 
 .footer-container {
-    position: relative;
+
     flex-direction: column;
     width: 90%;
     height: 100%;
@@ -19,4 +19,4 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-}
+    }
