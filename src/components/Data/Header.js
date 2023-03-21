@@ -19,7 +19,7 @@ const Header = () => {
             <div className='navigation' >
                 <ul>
                     <li onClick={() => handleIconClick('faPaw')} className={activeIcon === 'faPaw' ? 'active' : ''} >
-                        <Link to='pets'>
+                        <Link to='/pets'>
                             <span className='icon'>
                                 <FontAwesomeIcon icon={faPaw} />
                             </span>
@@ -35,7 +35,7 @@ const Header = () => {
                         </Link>
                     </li>
                     <li onClick={() => handleIconClick('faRightFromBracket')} className={activeIcon === 'faRightFromBracket' ? 'active' : ''}>
-                        <Link to='login'>
+                        <Link to='/login'>
                             <span className='icon'>
                                 <FontAwesomeIcon icon={faRightFromBracket} />
                             </span>
