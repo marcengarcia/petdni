@@ -12,7 +12,7 @@ const Profile = () => {
             <div className="carrousel"> <Slider />AGREGAR IMAGEN</div>
             <div className='accordion'>
                 <div className="dog-data">
-                    <input type="radio" name="accordion" id="first" />
+                    <input type="radio" name="accordion" id="first" defaultChecked/>
                     <label for="first">datos del perruno</label>
                     <div className='content'>
                         <table>
