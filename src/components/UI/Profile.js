@@ -14,7 +14,7 @@ const Profile = () => {
                 <div className="dog-data">
                     <input type="radio" name="accordion" id="first" />
                     <label for="first">datos del perruno</label>
-                    <div className='dog-info-table'>
+                    <div className='content'>
                         <table>
                             <tr>
                                 <td class="highlight"><div></div></td>

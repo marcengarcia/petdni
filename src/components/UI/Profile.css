@@ -41,6 +41,8 @@ table {
 }
 
 .carrousel {
+    justify-content: center;
+    align-items: center;
     grid-row: 2/3;
     grid-column: 1;
 }
