@@ -27,7 +27,7 @@ const Header = () => {
                         </Link>
                     </li>
                     <li onClick={() => handleIconClick('faIdCard')} className={activeIcon === 'faIdCard' ? 'active' : ''}>
-                        <Link to='profile'>
+                        <Link to='/profile'>
                             <span className='icon'>
                                 <FontAwesomeIcon icon={faIdCard} />
                             </span>

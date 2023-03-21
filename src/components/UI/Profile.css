@@ -1,0 +1,82 @@
+.card {
+    display: grid;
+    max-width: 740px;
+    grid-template-columns: 300px 1fr;
+    grid-template-rows: 50px 166px 166px 166px 50px;
+    border-radius: 12px;
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.25);
+    color: white;
+    justify-content: space-around;
+    align-items: start;
+    padding: 12px;
+    margin: 50px auto;
+    background-color: #4b4b4b;
+    gap: 12px;
+}
+
+.header {
+    max-width: 1000px;
+    grid-row: 1;
+    grid-column: 1/-1;
+}
+
+.footer {
+    max-width: 1000px;
+    grid-row: 5;
+    grid-column: 1/-1;
+}
+.dog-info-table {
+    grid-area: 2/2/-1/-1;
+}
+
+.human-info-table {
+    grid-area: 3/2/-1/-1;
+}
+
+.other-info-table {
+    grid-area: 4/2/-1/-1;
+}
+
+.dog-info-table,
+.human-info-table,
+.other-info-table {
+    max-width: 600px;
+    padding: 0.5rem;
+    margin: 20px 0;
+    border: 1px solid #ececec;
+    background-color: #2a2a2a;
+    border-radius: 12px;
+}
+
+.content {
+    margin: 0;
+    padding: 0;
+    max-width: 400px;
+}
+
+.accordion .content {
+    background-color: white;
+    border-radius: 6px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s, padding 0.5s;
+}
+
+.image-area {
+    display: flex;
+    width: 300px;
+    height: 500px;
+    border: 1px solid white;
+    border-radius: 12px;
+    color: white;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+table {
+    color: black;
+    background-color: white;
+    border-collapse: collapse;
+}
