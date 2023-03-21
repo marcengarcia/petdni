@@ -1,7 +1,7 @@
 import './Header.css'
 import { useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faPaw, faMessage, faRightFromBracket } from '@fortawesome/free-solid-svg-icons'
+import { faPaw, faIdCard, faRightFromBracket } from '@fortawesome/free-solid-svg-icons'
 
 
 const Header = () => {
@@ -19,15 +19,15 @@ const Header = () => {
                             <span className='icon'>
                                 <FontAwesomeIcon icon={faPaw} />
                             </span>
-                            <span className='text'>Perfil</span>
+                            <span className='text'>Mascotas</span>
                         </a>
                     </li>
-                    <li onClick={() => handleIconClick('faMessage')} className={activeIcon === 'faMessage' ? 'active' : ''}>
+                    <li onClick={() => handleIconClick('faIdCard')} className={activeIcon === 'faIdCard' ? 'active' : ''}>
                         <a href="#">
                             <span className='icon'>
-                                <FontAwesomeIcon icon={faMessage} />
+                                <FontAwesomeIcon icon={faIdCard} />
                             </span>
-                            <span className='text'>Mensajes</span>
+                            <span className='text'>Perfil</span>
                         </a>
                     </li>
                     <li onClick={() => handleIconClick('faRightFromBracket')} className={activeIcon === 'faRightFromBracket' ? 'active' : ''}>
