@@ -1,5 +1,5 @@
 import './Login.css';
-
+import { Link } from 'react-router-dom'
 
 const Login = () => {
 
@@ -10,7 +10,7 @@ const Login = () => {
                 <input type="email" placeholder='Email' />
                 <input type="password" placeholder='Contraseña' />
                 <button className='login-btn' type='submit'>Ingresar</button>
-                <p>No tengo cuenta, <a href="">registrarme</a>.</p>
+                <p>No tengo cuenta, <Link to='/register'>registrarme</Link>.</p>
             </div>
         </div>
     )

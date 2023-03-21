@@ -11,13 +11,12 @@ const App = () => {
 
   return (
     <Router>
-      <div className='container'>
+      <div>
         <Switch>
           <Route path='/' Component={Card} exact/>
           <Route path='/login' Component={Login} exact/>
-          <Route path='/Register' Component={Register} exact/>
+          <Route path='/register' Component={Register} exact/>
         </Switch>
-
       </div>
     </Router>
   )

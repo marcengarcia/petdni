@@ -2,6 +2,8 @@ import './Header.css'
 import { useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPaw, faIdCard, faRightFromBracket } from '@fortawesome/free-solid-svg-icons'
+import React from 'react';
+import { Link } from 'react-router-dom'
 
 
 const Header = () => {
@@ -11,32 +13,34 @@ const Header = () => {
         setActiveIcon(iconName);
     };
     return (
+
         <nav>
+
             <div className='navigation' >
                 <ul>
                     <li onClick={() => handleIconClick('faPaw')} className={activeIcon === 'faPaw' ? 'active' : ''} >
-                        <a href="#">
+                        <Link to='pets'>
                             <span className='icon'>
                                 <FontAwesomeIcon icon={faPaw} />
                             </span>
                             <span className='text'>Mascotas</span>
-                        </a>
+                        </Link>
                     </li>
                     <li onClick={() => handleIconClick('faIdCard')} className={activeIcon === 'faIdCard' ? 'active' : ''}>
-                        <a href="#">
+                        <Link to='profile'>
                             <span className='icon'>
                                 <FontAwesomeIcon icon={faIdCard} />
                             </span>
                             <span className='text'>Perfil</span>
-                        </a>
+                        </Link>
                     </li>
                     <li onClick={() => handleIconClick('faRightFromBracket')} className={activeIcon === 'faRightFromBracket' ? 'active' : ''}>
-                        <a href="#">
+                        <Link to='login'>
                             <span className='icon'>
                                 <FontAwesomeIcon icon={faRightFromBracket} />
                             </span>
                             <span className='text'>Salir</span>
-                        </a>
+                        </Link>
                     </li>
                     <div className='indicator'></div>
                 </ul>
