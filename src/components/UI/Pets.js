@@ -9,14 +9,14 @@ import PetPicker from "../Data/PetPicker";
 
 
 
-const Pets = (props) => {
+const Pets = () => {
     return (
         <div className="card">
             <div className="header"><Header /></div>
             
             <div className="slider-component" >
                 <DogPictures />
-                <div className='dog-name'>{props.name}</div>
+                <div className='dog-name'>{}</div>
             </div>
             <div className="content">
                 <div className="dog-data"><DogData /></div>

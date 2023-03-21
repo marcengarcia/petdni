@@ -5,7 +5,7 @@ const HumanData = () => {
     let humanData = [
         {
             name: 'Marce',
-            phone: '+54 291 511 1033',
+            phone: '+54 123456789',
             instagram: '@marcengarcia',
             twitter: '@marcengarcia',
             Facebook: '@marcengarcia',

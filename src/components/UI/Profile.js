@@ -13,7 +13,8 @@ const Profile = () => {
             <div className='accordion'>
                 <div className="dog-data">
                     <input type="radio" name="accordion" id="first" defaultChecked/>
-                    <label for="first">datos del perruno</label>
+<div>                    <label for="first">datos del perruno</label>
+                    <button className="save-data">Guardar</button></div>
                     <div className='content'>
                         <table>
                             <tr>
