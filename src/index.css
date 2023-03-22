@@ -9,7 +9,9 @@ html {
 }
 
 body {
-  align-items: center;
   background-color: #3f3f3f;
 }
 
+:root {
+  margin: 0;
+}

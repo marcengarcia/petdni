@@ -5,9 +5,12 @@ import { Link } from "react-router-dom";
 const Landing = () => {
     return (
 
-        <div className="card">
-            <p>BIENVENIDO A LA APP DNI DE TUS MASCOTAS</p>
+        <div className="landing-page">
+            <div className="landing-page-wrapper">
+            <p>PetDNI</p>
+            <p>BIENVENIDO AL DNI DE TUS MASCOTAS</p>
             <Link to="/login" className="btn">Empezar!</Link>
+            </div>
         </div>
 
 
