@@ -22,15 +22,15 @@ const Login = () => {
         })
     }
     return (
-        <div className='container'>
-            <div className='login-box'>
+        <div className='login-container'>
+            <div className='login-wrapper'>
                 <h1>Registarse</h1>
                 <input type="text" placeholder='Nombre' onChange={(e) => { setFirstName(e.target.value) }} />
                 <input type="text" placeholder='Apellido' onChange={(e) => { setLastName(e.target.value) }} />
                 <input type="email" placeholder='Email' onChange={(e) => { setEmail(e.target.value) }} />
                 <input type="password" placeholder='Contraseña' onChange={(e) => { setPassword(e.target.value) }} />
                 <input type="password" placeholder='Repetir contraseña' />
-                <button className='login-btn' onClick={submitReg}>Registrarse</button>
+                <button className='reg-btn' onClick={submitReg}>Registrarse</button>
                 <p>Ya tengo una cuenta, <Link to='/login'>ingresar</Link>.</p>
             </div>
         </div>

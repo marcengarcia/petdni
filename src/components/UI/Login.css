@@ -18,14 +18,36 @@
     color: white;
     width: 600px;;
     height: 600px;
+    text-decoration: none;
 }
 
 .login-wrapper input, button {
     border-radius: 20px;
     width: 80%;
     text-align: center;
+    
 }
 
-.login-wrapper button {
+button {
+    background-color: transparent;
+    border: 1px solid white;
+    color: white;
+}
 
+button:hover {
+    background-color: #a2a2a2;
+    color: #2a2a2a;
+}
+
+.bottom-text {
+    font-size: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+a {
+    color: white;
 }

@@ -10,8 +10,10 @@ const Login = () => {
                 <input type="email" placeholder='Email' />
                 <input type="password" placeholder='Contraseña' />
                 <button className='login-btn' type='submit'>Ingresar</button>
+                <div className='bottom-text'>
                 <p>No tengo cuenta, <Link to='/register'>registrarme</Link>.</p>
                 <p><Link to=''>¿Olvidaste tu contraseña? </Link></p>
+                </div>
             </div>
         </div>
     )
