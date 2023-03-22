@@ -9,7 +9,7 @@ function importAll(r) {
 
 importAll(require.context('../../images/', false, /\.(png|jpe?g|svg)$/));
 
-const DogPictures = () => {
+const DogPictures = (props) => {
     return (
         <div className='carrousel'>
             <Slider pictures={slides}>
@@ -19,6 +19,7 @@ const DogPictures = () => {
                     ))}
                 </div>
             </Slider>
+            <div className="dog-name">{props.dogData?.name}</div>
         </div>
     )
 }

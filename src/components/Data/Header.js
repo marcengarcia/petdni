@@ -13,12 +13,10 @@ const Header = () => {
         setActiveIcon(iconName);
     };
     return (
-
         <nav>
-
             <div className='navigation' >
                 <ul>
-                    <li onClick={() => handleIconClick('faPaw')} className={activeIcon === 'faPaw' ? 'active' : ''} >
+                    <li onClick={() => handleIconClick('faPaw')} className={activeIcon === 'faPaw' ? 'active' : ''} > 
                         <Link to='/pets'>
                             <span className='icon'>
                                 <FontAwesomeIcon icon={faPaw} />

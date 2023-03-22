@@ -35,8 +35,7 @@ function Slider({ pictures }) {
                 })}
             </div>
             <FontAwesomeIcon icon={faCircleArrowRight} className="arrow-forward" onClick={nextImage}/>
-            <div className="dog-name">Molly</div>
-        </div>
+                  </div>
     )
 }
 

@@ -1,8 +1,9 @@
 import './Footer.css'
 
-const Footer = () => {
+const Footer = (props) => {
     return (
         <footer>
+            
             <div className='footer-container'>
                 <div href="https://test.com">Nombre de empresa copada</div>
                 <div>&copy; 2023 empresa copada.</div>

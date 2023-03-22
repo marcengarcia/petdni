@@ -1,17 +1,6 @@
 import './HumanData.css'
 
-const HumanData = () => {
-
-    let humanData = [
-        {
-            name: 'Marce',
-            phone: '+54 123456789',
-            instagram: '@marcengarcia',
-            twitter: '@marcengarcia',
-            Facebook: '@marcengarcia',
-            other: ''
-        },
-    ]
+const HumanData = (props) => {
 
     return (
         <div className='accordion'>
@@ -22,37 +11,37 @@ const HumanData = () => {
                     <tr>
                         <td class="highlight"><div></div></td>
                         <td>Nombre:</td>
-                        <td className='value'>{humanData[0].name}</td>
+                        <td className='value'>{props.humanData?.name}</td>
                         <td class="highlight"><div></div></td>
                     </tr>
                     <tr>
                         <td class="highlight"><div></div></td>
                         <td>Telefono:</td>
-                        <td className='value'>{humanData[0].phone}</td>
+                        <td className='value'>{props.humanData?.phone}</td>
                         <td class="highlight"><div></div></td>
                     </tr>
                     <tr>
                         <td class="highlight"><div></div></td>
                         <td>Instagram:</td>
-                        <td className='value'>{humanData[0].instagram}</td>
+                        <td className='value'>{props.humanData?.instagram}</td>
                         <td class="highlight"><div></div></td>
                     </tr>
                     <tr>
                         <td class="highlight"><div></div></td>
                         <td>Twitter:</td>
-                        <td className='value'>{humanData[0].twitter}</td>
+                        <td className='value'>{props.humanData?.twitter}</td>
                         <td class="highlight"><div></div></td>
                     </tr>
                     <tr>
                         <td class="highlight"><div></div></td>
                         <td>Facebook:</td>
-                        <td className='value'>{humanData[0].Facebook}</td>
+                        <td className='value'>{props.humanData?.Facebook}</td>
                         <td class="highlight"><div></div></td>
                     </tr>
                     <tr>
                         <td class="highlight"><div></div></td>
                         <td>Otro:</td>
-                        <td className='value'>{humanData[0].other}</td>
+                        <td className='value'>{props.humanData?.other}</td>
                         <td class="highlight"><div></div></td>
                     </tr>
                 </table>

@@ -7,23 +7,53 @@ import Footer from '../Data/Footer';
 import Header from '../Data/Header';
 import PetPicker from "../Data/PetPicker";
 
-
-
 const Pets = () => {
+    let dogData = {
+        name: 'Mollys',
+        age: '2 años',
+        race: 'Labrador',
+        sex: 'Hembra',
+        neutered: 'Si',
+        vaxxed: 'Si',
+        chipped: 'Si',
+        other: 'No'
+    };
+
+    let humanData = {
+        name: 'Marcelus',
+        phone: '+54 123456789',
+        instagram: '@marcengarcia',
+        twitter: '@marcengarcia',
+        Facebook: '@marcengarcia',
+        other: ''
+    }
+
+    let otherData = {
+        otherInfo: 'Aca iria un text area read only con info que los dueños crean que es importante y no esta en los campos de las tablas',
+    }
+
+    // const [dogData, setDogData] = useState(null);
+
+    // useEffect(() => {
+    //     fetch('/api/dogs/1').then((response) => response.json()).then((json) => {
+    //         setDogData( json )
+    //     })
+    // }, []);
+
     return (
         <div className="card">
             <div className="header"><Header /></div>
-            
+
             <div className="slider-component" >
-                <DogPictures />
-                <div className='dog-name'>{}</div>
+                <DogPictures dogData={dogData} />
+                <div className='dog-name'>{ }</div>
             </div>
             <div className="content">
-                <div className="dog-data"><DogData /></div>
-                <div className="human-data"><HumanData /></div>
-                <div className="other-data"><OtherData /></div>
+                <div className="dog-data"><DogData dogData={dogData} /></div>
+                <div className="human-data"><HumanData humanData={humanData} /></div>
+                <div className="other-data"><OtherData otherData={otherData} /></div>
             </div>
-            <div className="pet-picker"><PetPicker/></div>
+            <div className="pet-picker"><PetPicker /></div>
             <div className="footer"><Footer /></div>
         </div>
     )
