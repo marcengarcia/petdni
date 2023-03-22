@@ -7,7 +7,7 @@ const Landing = () => {
 
         <div className="card">
             <p>BIENVENIDO A LA APP DNI DE TUS MASCOTAS</p>
-            <Link to="/register" className="btn">Empezar!</Link>
+            <Link to="/login" className="btn">Empezar!</Link>
         </div>
 
 

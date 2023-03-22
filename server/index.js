@@ -13,6 +13,10 @@ const conn = mysql.createConnection({
     database: "pet_dni",
 })
 
+
+
+
+
 conn.connect(function (err) {
     if (err) throw err;
     console.log("Connected to the MySql");
@@ -25,8 +29,9 @@ conn.connect(function (err) {
 
 
 
-app.get('/', (req, res) => {
-    res.send('Holis, soy tu server =)')
+app.post('/api/insert', (req,res) => {
+    const sqlInsert = "INSERT INTO  users () VALUES ()"
+    conn.query()
 })
 
 app.listen(PORT, () => {
