@@ -6,15 +6,15 @@ import Axios from "axios"
 
 const Login = () => {
 
-    const [firstName, setFirstName] = useState('')
-    const [lastName, setLastName] = useState('')
+    const [firstname, setFirstName] = useState('')
+    const [lastname, setLastName] = useState('')
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
 
     const submitReg = () => {
         Axios.post('http://localhost:3001/api/insert', {
-            firstName: firstName,
-            lastName: lastName,
+            firstname: firstname,
+            lastname: lastname,
             email: email,
             password: password
         }).then(() => {
