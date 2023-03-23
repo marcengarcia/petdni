@@ -5,7 +5,6 @@ import HumanData from '../Data/HumanData';
 import OtherData from '../Data/OtherData';
 import Footer from '../Data/Footer';
 import Header from '../Data/Header';
-import PetPicker from "../Data/PetPicker";
 
 const Pets = () => {
     let dogData = {
@@ -53,7 +52,6 @@ const Pets = () => {
                 <div className="human-data"><HumanData humanData={humanData} /></div>
                 <div className="other-data"><OtherData otherData={otherData} /></div>
             </div>
-            <div className="pet-picker"><PetPicker /></div>
             <div className="footer"><Footer /></div>
         </div>
     )
