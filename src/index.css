@@ -13,5 +13,8 @@ body {
 }
 
 :root {
-  margin: 0;
+  --clr1: white;
+  --clr2: #3f3f3f;
+  --clr3: #a2a2a2;
+  --clr4: #2a2a2a;
 }
