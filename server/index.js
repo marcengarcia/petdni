@@ -30,9 +30,21 @@ app.post('/api/insert', (req, res) => {
     const email = req.body.email
     const password = req.body.password
 
-    const sqlInsert = "INSERT INTO  users (firstname, lastname, email, password) VALUES (?,?,?,?)"
+    const sqlInsert = "INSERT INTO users (firstname, lastname, email, password) VALUES (?,?,?,?)"
     conn.query(sqlInsert, [firstname, lastname, email, password], (err, result) => {
         console.log(err)
+    })
+})
+
+app.get('/api/checkEmail/:email', (req, res) => {
+    const email = req.params.email
+    const query = `SELECT * FROM users WHERE email = '${email}'`
+    conn.query(query, (err, result) => {
+        if (err) {
+            res.send({ err: err })
+        } else {
+            res.send(result)
+        }
     })
 })
 

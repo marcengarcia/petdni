@@ -1,26 +1,45 @@
-import './Login.css';
+import './Register.css';
 import { Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import Axios from "axios"
 
 
-const Login = () => {
+const Register = () => {
 
     const [firstname, setFirstName] = useState('')
     const [lastname, setLastName] = useState('')
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
 
+    const validatePassword = (password) => {
+        const regex = /^(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{8,}$/;
+        return regex.test(password);
+      }
+      
     const submitReg = () => {
-        Axios.post('http://localhost:3001/api/insert', {
-            firstname: firstname,
-            lastname: lastname,
-            email: email,
-            password: password
-        }).then(() => {
-            alert('successfull insert')
+
+        if (!validatePassword(password)) {
+            alert('La contraseña debe tener al menos 8 caracteres y 1 caracter especial.');
+            return;
+          }
+          
+
+        Axios.get(`http://localhost:3001/api/checkEmail/${email}`).then((response) => {
+            if (response.data.length > 0) {
+                alert('El email ya existe.')
+            } else {
+                Axios.post('http://localhost:3001/api/insert', {
+                    firstname: firstname,
+                    lastname: lastname,
+                    email: email,
+                    password: password
+                }).then(() => {
+                    alert('Registro correcto')
+                })
+            }
         })
     }
+
     return (
         <div className='login-container'>
             <div className='login-wrapper'>
@@ -37,4 +56,4 @@ const Login = () => {
     )
 }
 
-export default Login;
+export default Register;
