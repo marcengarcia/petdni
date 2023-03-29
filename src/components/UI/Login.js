@@ -15,7 +15,7 @@ const Login = () => {
             <form onSubmit={handleSubmit} className='login-wrapper'>
                 <h1>Ingresar</h1>
                 <input value={email} onChange={(e) => setEmail(e.target.value)} type="text" placeholder='Email' />
-                <input value={password} onChange={(e) => setPassword(e.target.value)}type="text" placeholder='Contraseña' />
+                <input value={password} onChange={(e) => setPassword(e.target.value)}type="password" placeholder='Contraseña' />
                 <button className='login-btn' type='submit'>Ingresar</button>
                 <div className='bottom-text'>
                     <p>No tengo cuenta, <Link to='/register'>registrarme</Link>.</p>

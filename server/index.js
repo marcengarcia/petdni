@@ -24,7 +24,7 @@ app.use(express.json())
 app.use(bodyParser.urlencoded({ extended: true }))
 
 app.post('/api/sign-up', (req, res) => {
-    
+
     const firstname = req.body.firstname
     const lastname = req.body.lastname
     const email = req.body.email
@@ -48,6 +48,16 @@ app.get('/api/checkEmail/:email', (req, res) => {
     })
 })
 
-app.listen(PORT, () => {
-    console.log('running on port: ' + PORT)
+app.get('/api/checkEmailAndPassword/:email/:password', (req, res) => {
+    const email = req.params.email
+    const password = req.params.password
+    const query = `SELECT * FROM users WHERE email = '${email}' AND password = '${password}'`
+    conn.query(query, (err, result) => {
+        if (err) {
+            res.send({ err: err })
+        } else {
+            res.send(result)
+        }
+    })
 })
+
