@@ -23,7 +23,7 @@ app.use(cors())
 app.use(express.json())
 app.use(bodyParser.urlencoded({ extended: true }))
 
-app.post('/api/insert', (req, res) => {
+app.post('/api/sign-up', (req, res) => {
     
     const firstname = req.body.firstname
     const lastname = req.body.lastname
