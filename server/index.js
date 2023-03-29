@@ -47,3 +47,6 @@ app.get('/api/checkEmail/:email', (req, res) => {
         }
     })
 })
+app.listen(PORT, () => {
+    console.log('running on port: ' + PORT)
+})
