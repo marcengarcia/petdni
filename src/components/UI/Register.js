@@ -18,6 +18,12 @@ const Register = () => {
         return regex.test(password)
     }
 
+    const handleKeyDown = (event) => {
+        if (event.key === 'Enter') {
+          submitReg()
+        }
+      }
+
     const submitReg = () => {
         if (!validatePassword(password)) {
             alert('La contraseña debe tener al menos 8 caracteres y 1 caracter especial.')
@@ -56,11 +62,11 @@ const Register = () => {
         <div className='login-container'>
             <formon Submit={handleSubmit} className='login-wrapper'>
                 <h1>Registarse</h1>
-                <input type="text" placeholder='Nombre' onChange={(e) => { setFirstName(e.target.value) }} />
-                <input type="text" placeholder='Apellido' onChange={(e) => { setLastName(e.target.value) }} />
-                <input type="email" placeholder='Email' onChange={(e) => { setEmail(e.target.value) }} />
-                <input type="password" name="passwords" placeholder='Contraseña' onChange={(e) => { setPassword(e.target.value) }} />
-                <input type="password" name="confirm" placeholder='Repetir contraseña' onChange={(e) => { setConfirmPassword(e.target.value) }} />
+                <input type="text" placeholder='Nombre' onChange={(e) => { setFirstName(e.target.value) }} onKeyDown={handleKeyDown}/>
+                <input type="text" placeholder='Apellido' onChange={(e) => { setLastName(e.target.value) }} onKeyDown={handleKeyDown}/>
+                <input type="email" placeholder='Email' onChange={(e) => { setEmail(e.target.value) }} onKeyDown={handleKeyDown}/>
+                <input type="password" name="passwords" placeholder='Contraseña' onChange={(e) => { setPassword(e.target.value) }} onKeyDown={handleKeyDown}/>
+                <input type="password" name="confirm" placeholder='Repetir contraseña' onChange={(e) => { setConfirmPassword(e.target.value) }} onKeyDown={handleKeyDown}/>
                 <button className='reg-btn' onClick={submitReg}>Registrarse</button>
                 <div className='bottom-text'>
                     <p>Ya tengo una cuenta, <Link to='/login'>ingresar</Link>.</p>
