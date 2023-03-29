@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import Axios from "axios"
 
-
 const Register = () => {
 
     const [firstname, setFirstName] = useState('')
@@ -20,18 +19,21 @@ const Register = () => {
     const submitReg = () => {
 
         if (!validatePassword(password)) {
-            alert('La contraseña debe tener al menos 8 caracteres y 1 caracter especial.');
-            return;
+            alert('La contraseña debe tener al menos 8 caracteres y 1 caracter especial.')
+            return
         }
         if (password !== confirmPassword) {
-            alert('Las contraseñas no coinciden.');
-            return;
+            alert('Las contraseñas no coinciden.')
+            return
         }
+
+
 
         Axios.get(`http://localhost:3001/api/checkEmail/${email}`).then((response) => {
             if (response.data.length > 0) {
                 alert('El email ya existe.')
             } else {
+                
                 Axios.post('http://localhost:3001/api/insert', {
                     firstname: firstname,
                     lastname: lastname,
