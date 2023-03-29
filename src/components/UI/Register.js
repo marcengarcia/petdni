@@ -13,43 +13,39 @@ const Register = () => {
     const [confirmPassword, setConfirmPassword] = useState('')
 
     const validatePassword = (password) => {
-        const regex = /^(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{8,}$/;
-        return regex.test(password);
+        const regex = /^(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{8,}$/
+        return regex.test(password)
     }
 
     const submitReg = () => {
         if (!validatePassword(password)) {
-          alert('La contraseña debe tener al menos 8 caracteres y 1 caracter especial.')
-          return
+            alert('La contraseña debe tener al menos 8 caracteres y 1 caracter especial.')
+            return
         }
         if (password !== confirmPassword) {
-          alert('Las contraseñas no coinciden.')
-          return
+            alert('Las contraseñas no coinciden.')
+            return
         }
-      
-        Axios.get(`http://localhost:3001/api/checkEmail/${email}`).then((response) => {
-          if (response.data.length > 0) {
-            alert('El email ya existe.')
-          } else {
-            bcrypt.genSalt(10, function(err, salt) {
-              bcrypt.hash(password, salt, function(err, hash) {
-                if (err) throw err;
-                Axios.post('http://localhost:3001/api/sign-up', {
-                  firstname: firstname,
-                  lastname: lastname,
-                  email: email,
-                  password: hash
-                }).then(() => {
-                  alert('Registro correcto')
-                })
-              })
-            })
-          }
-        })
-      }
-      
-    
 
+        Axios.get(`http://localhost:3001/api/checkEmail/${email}`).then((response) => {
+            if (response.data.length > 0) {
+                alert('El email ya existe.')
+                return
+            } else {
+                bcrypt.genSalt(10, function (err, salt) {
+                    bcrypt.hash(password, salt, function (err, hash) {
+                        if (err) throw err;
+                        Axios.post('http://localhost:3001/api/sign-up', {
+                            firstname: firstname,
+                            lastname: lastname,
+                            email: email,
+                            password: hash
+                        })
+                    })
+                })
+            }
+        })
+    }
 
     const handleSubmit = (e) => {
         e.preventDefault()
@@ -63,7 +59,7 @@ const Register = () => {
                 <input type="text" placeholder='Apellido' onChange={(e) => { setLastName(e.target.value) }} />
                 <input type="email" placeholder='Email' onChange={(e) => { setEmail(e.target.value) }} />
                 <input type="password" name="passwords" placeholder='Contraseña' onChange={(e) => { setPassword(e.target.value) }} />
-                <input type="password" name="confirm" placeholder='Repetir contraseña'onChange={(e) => { setConfirmPassword(e.target.value) }} />
+                <input type="password" name="confirm" placeholder='Repetir contraseña' onChange={(e) => { setConfirmPassword(e.target.value) }} />
                 <button className='reg-btn' onClick={submitReg}>Registrarse</button>
                 <div className='bottom-text'>
                     <p>Ya tengo una cuenta, <Link to='/login'>ingresar</Link>.</p>
