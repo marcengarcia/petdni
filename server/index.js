@@ -5,6 +5,10 @@ const app = express()
 const PORT = process.env.PORT || 3001
 const mysql = require('mysql')
 
+app.listen(PORT, () => {
+    console.log('running on port: ' + PORT)
+})
+
 const conn = mysql.createConnection({
     host: "localhost",
     user: "root",
@@ -46,7 +50,4 @@ app.get('/api/checkEmail/:email', (req, res) => {
             res.send(result)
         }
     })
-})
-app.listen(PORT, () => {
-    console.log('running on port: ' + PORT)
 })
