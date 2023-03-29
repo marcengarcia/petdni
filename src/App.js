@@ -5,6 +5,7 @@ import Pets from './components/UI/Pets';
 import Profile from './components/UI/Profile';
 import Login from './components/UI/Login';
 import Register from './components/UI/Register';
+import Landing from './components/UI/Landing';
 
 
 
@@ -15,7 +16,7 @@ const App = () => {
     <Router>
       <div>
         <Switch>
-          <Route path='/' Component={Login} exact/>
+          <Route path='/' Component={Landing} exact/>
           <Route path='/login' Component={Login} exact/>
           <Route path='/register' Component={Register} exact/>
           <Route path='/profile' Component={Profile} exact/>

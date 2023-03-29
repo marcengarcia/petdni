@@ -12,8 +12,6 @@ const Landing = () => {
             <Link to="/login" className="btn">Empezar!</Link>
             </div>
         </div>
-
-
     )
 }
 

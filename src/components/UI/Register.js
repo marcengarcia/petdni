@@ -1,10 +1,11 @@
-import './Register.css';
-import { Link } from 'react-router-dom';
-import { useState, useEffect } from 'react';
-import Axios from "axios"
+import './Register.css'
+import { Link, useNavigate } from 'react-router-dom'
+import { useState } from 'react'
+import Axios from 'axios'
 import bcrypt from 'bcryptjs'
 
 const Register = () => {
+    const navigate = useNavigate()
 
     const [firstname, setFirstName] = useState('')
     const [lastname, setLastName] = useState('')
@@ -40,7 +41,7 @@ const Register = () => {
                             lastname: lastname,
                             email: email,
                             password: hash
-                        })
+                        }).then(navigate('/profile'))
                     })
                 })
             }
