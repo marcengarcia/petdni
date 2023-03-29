@@ -2,6 +2,7 @@ import './Login.css';
 import { Link, useNavigate } from 'react-router-dom'
 import { useState } from 'react';
 import Axios from 'axios'
+import bcrypt, { hash } from 'bcryptjs'
 
 const Login = () => {
     const navigate = useNavigate()
@@ -9,15 +10,21 @@ const Login = () => {
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
 
-    const handleSubmit = (e) => {
-        e.preventDefault()
-    }
 
     const handleKeyDown = (event) => {
         if (event.key === 'Enter') {
             handleSubmit()
         }
     }
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+      
+    }
+      
+
+
+    
 
     return (
         <div className='login-container'>
@@ -35,4 +42,5 @@ const Login = () => {
     )
 }
 
-export default Login;
+
+export default Login

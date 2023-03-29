@@ -41,7 +41,7 @@ const Register = () => {
             } else {
                 bcrypt.genSalt(10, function (err, salt) {
                     bcrypt.hash(password, salt, function (err, hash) {
-                        if (err) throw err;
+                        if (err) throw err
                         Axios.post('http://localhost:3001/api/sign-up', {
                             firstname: firstname,
                             lastname: lastname,
