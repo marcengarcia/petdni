@@ -47,17 +47,3 @@ app.get('/api/checkEmail/:email', (req, res) => {
         }
     })
 })
-
-app.get('/api/checkEmailAndPassword/:email/:password', (req, res) => {
-    const email = req.params.email
-    const password = req.params.password
-    const query = `SELECT * FROM users WHERE email = '${email}' AND password = '${password}'`
-    conn.query(query, (err, result) => {
-        if (err) {
-            res.send({ err: err })
-        } else {
-            res.send(result)
-        }
-    })
-})
-
