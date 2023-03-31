@@ -11,14 +11,35 @@ import PrivateRounter from './components/utils/PrivateRouter'
 
 
 const App = () => {
+  let dogData = {
+    name: 'Mollys',
+    age: '2 años',
+    race: 'Labrador',
+    sex: 'Hembra',
+    neutered: 'Si',
+    vaxxed: 'Si',
+    chipped: 'Si',
+    allergies: 'No',
+    other: 'No'
+}
+let humanData = {
+  name: 'Marcelus',
+  phone: '+54 123456789',
+  instagram: '@marcengarcia',
+  twitter: '@marcengarcia',
+  Facebook: '@marcengarcia',
+  other: ''
+}
 
-
+let otherData = {
+  otherInfo: 'Aca iria un text area read only con info que los dueños crean que es importante y no esta en los campos de las tablas',
+}
   return (
     <Router>
         <Routes>
           <Route element={<PrivateRounter/>}>
-            <Route path='/profile' element={<Profile/>} exact />
-            <Route path='/pets' element={<Pets/>} exact />
+            <Route path='/profile' element={<Profile dogData={dogData} humanData={humanData} otherData={otherData}/>} exact />
+            <Route path='/pets' element={<Pets dogData={dogData} humanData={humanData} otherData={otherData}/>} exact />
           </Route>
           <Route path='/' element={<Landing/>} exact />
           <Route path='/login' element={<Login/>} exact />
