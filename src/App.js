@@ -15,7 +15,6 @@ const App = () => {
 
   return (
     <Router>
-      <div>
         <Routes>
           <Route element={<PrivateRounter/>}>
             <Route path='/profile' element={<Profile/>} exact />
@@ -24,9 +23,7 @@ const App = () => {
           <Route path='/' element={<Landing/>} exact />
           <Route path='/login' element={<Login/>} exact />
           <Route path='/register' element={<Register/>} exact />
-
         </Routes>
-      </div>
     </Router>
   )
 }
