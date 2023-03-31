@@ -9,14 +9,7 @@ import Header from '../Data/Header';
 const Pets = (props) => {
 
 
-    let humanData = {
-        name: 'Marcelus',
-        phone: '+54 123456789',
-        instagram: '@marcengarcia',
-        twitter: '@marcengarcia',
-        Facebook: '@marcengarcia',
-        other: ''
-    }
+
 
     let otherData = {
         otherInfo: 'Aca iria un text area read only con info que los dueños crean que es importante y no esta en los campos de las tablas',
@@ -40,7 +33,7 @@ const Pets = (props) => {
             </div>
             <div className="content">
                 <div className="dog-data"><DogData dogData={props.dogData} /></div>
-                <div className="human-data"><HumanData humanData={humanData} /></div>
+                <div className="human-data"><HumanData humanData={props.humanData} /></div>
                 <div className="other-data"><OtherData otherData={otherData} /></div>
             </div>
             <div className="footer"><Footer /></div>

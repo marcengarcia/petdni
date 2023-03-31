@@ -22,13 +22,20 @@ const App = () => {
     allergies: 'No',
     other: 'No'
 }
-
+let humanData = {
+  name: 'Marcelus',
+  phone: '+54 123456789',
+  instagram: '@marcengarcia',
+  twitter: '@marcengarcia',
+  Facebook: '@marcengarcia',
+  other: ''
+}
   return (
     <Router>
         <Routes>
           <Route element={<PrivateRounter/>}>
-            <Route path='/profile' element={<Profile dogData={dogData}/>} exact />
-            <Route path='/pets' element={<Pets dogData={dogData}/>} exact />
+            <Route path='/profile' element={<Profile dogData={dogData} humanData={humanData}/>} exact />
+            <Route path='/pets' element={<Pets dogData={dogData} humanData={humanData}/>} exact />
           </Route>
           <Route path='/' element={<Landing/>} exact />
           <Route path='/login' element={<Login/>} exact />
