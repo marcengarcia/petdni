@@ -17,52 +17,36 @@ const Profile = () => {
                     <div className='content'>
                         <table>
                             <tr>
-                                <td class="highlight"><div></div></td>
                                 <td>Nombre:</td>
                                 <td className='value'><input type="text" /></td>
-                                <td class="highlight"><div></div></td>
                             </tr>
                             <tr>
-                                <td class="highlight"><div></div></td>
                                 <td>Edad:</td>
                                 <td className='value'><input type="text" /></td>
-                                <td class="highlight"><div></div></td>
                             </tr>
                             <tr>
-                                <td class="highlight"><div></div></td>
                                 <td>Raza:</td>
                                 <td className='value'><input type="text" /></td>
-                                <td class="highlight"><div></div></td>
                             </tr>
                             <tr>
-                                <td class="highlight"><div></div></td>
                                 <td>Sexo:</td>
                                 <td className='value'><input type="text" /></td>
-                                <td class="highlight"><div></div></td>
                             </tr>
                             <tr>
-                                <td class="highlight"><div></div></td>
                                 <td>Castrada:</td>
                                 <td className='value'><input type="text" /></td>
-                                <td class="highlight"><div></div></td>
                             </tr>
                             <tr>
-                                <td class="highlight"><div></div></td>
                                 <td>Vacunas al Dia:</td>
                                 <td className='value'><input type="text" /></td>
-                                <td class="highlight"><div></div></td>
                             </tr>
                             <tr>
-                                <td class="highlight"><div></div></td>
                                 <td>Chippeada:</td>
                                 <td className='value'><input type="text" /></td>
-                                <td class="highlight"><div></div></td>
                             </tr>
                             <tr>
-                                <td class="highlight"><div></div></td>
                                 <td>Otro:</td>
                                 <td className='value'><input type="text" /></td>
-                                <td class="highlight"><div></div></td>
                             </tr>
                         </table>
                         <button className="save-data">Guardar</button>
@@ -75,40 +59,32 @@ const Profile = () => {
                     <div className='content'>
                         <table>
                             <tr>
-                                <td class="highlight"><div></div></td>
                                 <td>Nombre:</td>
                                 <td className='value'><input type="text" /></td>
-                                <td class="highlight"><div></div></td>
                             </tr>
                             <tr>
-                                <td class="highlight"><div></div></td>
                                 <td>Telefono:</td>
                                 <td className='value'><input type="text" /></td>
-                                <td class="highlight"><div></div></td>
                             </tr>
                             <tr>
-                                <td class="highlight"><div></div></td>
                                 <td>Instagram:</td>
                                 <td className='value'><input type="text" /></td>
-                                <td class="highlight"><div></div></td>
                             </tr>
                             <tr>
-                                <td class="highlight"><div></div></td>
                                 <td>Twitter:</td>
                                 <td className='value'><input type="text" /></td>
-                                <td class="highlight"><div></div></td>
                             </tr>
                             <tr>
-                                <td class="highlight"><div></div></td>
                                 <td>Facebook:</td>
                                 <td className='value'><input type="text" /></td>
-                                <td class="highlight"><div></div></td>
                             </tr>
                             <tr>
-                                <td class="highlight"><div></div></td>
+                                <td>Alergias:</td>
+                                <td className='value'><input type="text" /></td>
+                            </tr>
+                            <tr>
                                 <td>Otro:</td>
                                 <td className='value'><input type="text" /></td>
-                                <td class="highlight"><div></div></td>
                             </tr>
                         </table>
                         <button className="save-data">Guardar</button>
