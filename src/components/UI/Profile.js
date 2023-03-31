@@ -45,6 +45,10 @@ const Profile = () => {
                                 <td className='value'><input type="text" /></td>
                             </tr>
                             <tr>
+                                <td>Alergias:</td>
+                                <td className='value'><input type="text" /></td>
+                            </tr>
+                            <tr>
                                 <td>Otro:</td>
                                 <td className='value'><input type="text" /></td>
                             </tr>
@@ -76,10 +80,6 @@ const Profile = () => {
                             </tr>
                             <tr>
                                 <td>Facebook:</td>
-                                <td className='value'><input type="text" /></td>
-                            </tr>
-                            <tr>
-                                <td>Alergias:</td>
                                 <td className='value'><input type="text" /></td>
                             </tr>
                             <tr>
