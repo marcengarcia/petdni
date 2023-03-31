@@ -4,7 +4,7 @@ import Header from '../Data/Header';
 import Slider from "../Data/Slider";
 
 
-const Profile = () => {
+const Profile = (props) => {
     return (
         <div className="card">
 
@@ -18,39 +18,41 @@ const Profile = () => {
                         <table>
                             <tr>
                                 <td>Nombre:</td>
-                                <td className='value'><input type="text" /></td>
+                                <td className='value'>
+                                <input type="text" defaultValue={props.dogData?.name} />
+                                </td>
                             </tr>
                             <tr>
                                 <td>Edad:</td>
-                                <td className='value'><input type="text" /></td>
+                                <input type="text" defaultValue={props.dogData?.age} />
                             </tr>
                             <tr>
                                 <td>Raza:</td>
-                                <td className='value'><input type="text" /></td>
+                                <input type="text" defaultValue={props.dogData?.race} />
                             </tr>
                             <tr>
                                 <td>Sexo:</td>
-                                <td className='value'><input type="text" /></td>
+                                <input type="text" defaultValue={props.dogData?.sex} />
                             </tr>
                             <tr>
                                 <td>Castrada:</td>
-                                <td className='value'><input type="text" /></td>
+                                <input type="text" defaultValue={props.dogData?.neutered} />
                             </tr>
                             <tr>
                                 <td>Vacunas al Dia:</td>
-                                <td className='value'><input type="text" /></td>
+                                <input type="text" defaultValue={props.dogData?.vaxxed} />
                             </tr>
                             <tr>
                                 <td>Chippeada:</td>
-                                <td className='value'><input type="text" /></td>
+                                <input type="text" defaultValue={props.dogData?.chipped} />
                             </tr>
                             <tr>
                                 <td>Alergias:</td>
-                                <td className='value'><input type="text" /></td>
+                                <input type="text" defaultValue={props.dogData?.allergies} />
                             </tr>
                             <tr>
                                 <td>Otro:</td>
-                                <td className='value'><input type="text" /></td>
+                                <input type="text" defaultValue={props.dogData?.other} />
                             </tr>
                         </table>
                         <button className="save-data">Guardar</button>
@@ -64,27 +66,27 @@ const Profile = () => {
                         <table>
                             <tr>
                                 <td>Nombre:</td>
-                                <td className='value'><input type="text" /></td>
+                                <input type="text" defaultValue={props.dogData?.name} />
                             </tr>
                             <tr>
                                 <td>Telefono:</td>
-                                <td className='value'><input type="text" /></td>
+                                <input type="text" defaultValue={props.dogData?.name} />
                             </tr>
                             <tr>
                                 <td>Instagram:</td>
-                                <td className='value'><input type="text" /></td>
+                                <input type="text" defaultValue={props.dogData?.name} />
                             </tr>
                             <tr>
                                 <td>Twitter:</td>
-                                <td className='value'><input type="text" /></td>
+                                <input type="text" defaultValue={props.dogData?.name} />
                             </tr>
                             <tr>
                                 <td>Facebook:</td>
-                                <td className='value'><input type="text" /></td>
+                                <input type="text" defaultValue={props.dogData?.name} />
                             </tr>
                             <tr>
                                 <td>Otro:</td>
-                                <td className='value'><input type="text" /></td>
+                                <input type="text" defaultValue={props.dogData?.name} />
                             </tr>
                         </table>
                         <button className="save-data">Guardar</button>
