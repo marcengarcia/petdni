@@ -11,9 +11,7 @@ const Pets = (props) => {
 
 
 
-    let otherData = {
-        otherInfo: 'Aca iria un text area read only con info que los dueños crean que es importante y no esta en los campos de las tablas',
-    }
+
 
     // const [dogData, setDogData] = useState(null);
 
@@ -34,7 +32,7 @@ const Pets = (props) => {
             <div className="content">
                 <div className="dog-data"><DogData dogData={props.dogData} /></div>
                 <div className="human-data"><HumanData humanData={props.humanData} /></div>
-                <div className="other-data"><OtherData otherData={otherData} /></div>
+                <div className="other-data"><OtherData otherData={props.otherData} /></div>
             </div>
             <div className="footer"><Footer /></div>
         </div>
