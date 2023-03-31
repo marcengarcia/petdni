@@ -19,7 +19,7 @@ const Profile = (props) => {
                             <tr>
                                 <td>Nombre:</td>
                                 <td className='value'>
-                                <input type="text" defaultValue={props.dogData?.name} />
+                                    <input type="text" defaultValue={props.dogData?.name} />
                                 </td>
                             </tr>
                             <tr>
@@ -66,27 +66,27 @@ const Profile = (props) => {
                         <table>
                             <tr>
                                 <td>Nombre:</td>
-                                <input type="text" defaultValue={props.dogData?.name} />
+                                <input type="text" defaultValue={props.humanData?.name} />
                             </tr>
                             <tr>
                                 <td>Telefono:</td>
-                                <input type="text" defaultValue={props.dogData?.name} />
+                                <input type="text" defaultValue={props.humanData?.phone} />
                             </tr>
                             <tr>
                                 <td>Instagram:</td>
-                                <input type="text" defaultValue={props.dogData?.name} />
+                                <input type="text" defaultValue={props.humanData?.instagram} />
                             </tr>
                             <tr>
                                 <td>Twitter:</td>
-                                <input type="text" defaultValue={props.dogData?.name} />
+                                <input type="text" defaultValue={props.humanData?.twitter} />
                             </tr>
                             <tr>
                                 <td>Facebook:</td>
-                                <input type="text" defaultValue={props.dogData?.name} />
+                                <input type="text" defaultValue={props.humanData?.facebook} />
                             </tr>
                             <tr>
                                 <td>Otro:</td>
-                                <input type="text" defaultValue={props.dogData?.name} />
+                                <input type="text" defaultValue={props.humanData?.other} />
                             </tr>
                         </table>
                         <button className="save-data">Guardar</button>
@@ -104,7 +104,9 @@ const Profile = (props) => {
                                 </tr>
                                 <tbody>
                                     <tr>
-                                        <td className='value'><textarea cols="30" rows="10"></textarea></td>
+                                        <td className='value'>
+                                            <textarea cols="30" rows="7" />
+                                        </td>
                                     </tr>
                                 </tbody>
                             </thead>
