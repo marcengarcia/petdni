@@ -23,7 +23,7 @@ const DogData = (props) => {
                     <tr>
                         <td class="highlight"><div></div></td>
                         <td>Raza:</td>
-                        <td className='value'>{props.dogData?.race}</td>
+                        <td className='value'>{props.dogData?.breed}</td>
                         <td class="highlight"><div></div></td>
                     </tr>
                     <tr>

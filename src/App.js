@@ -15,7 +15,7 @@ const App = () => {
   let dogData = {
     name: 'Mollys',
     age: '2 años',
-    race: 'Labrador',
+    breed: 'Labrador',
     sex: 'Hembra',
     neutered: 'Si',
     vaxxed: 'Si',

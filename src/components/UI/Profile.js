@@ -28,7 +28,7 @@ const Profile = (props) => {
                             </tr>
                             <tr>
                                 <td>Raza:</td>
-                                <input type="text" defaultValue={props.dogData?.race} />
+                                <input type="text" defaultValue={props.dogData?.breed} />
                             </tr>
                             <tr>
                                 <td>Sexo:</td>
