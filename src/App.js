@@ -11,14 +11,24 @@ import PrivateRounter from './components/utils/PrivateRouter'
 
 
 const App = () => {
-
+  let dogData = {
+    name: 'Mollys',
+    age: '2 años',
+    race: 'Labrador',
+    sex: 'Hembra',
+    neutered: 'Si',
+    vaxxed: 'Si',
+    chipped: 'Si',
+    allergies: 'No',
+    other: 'No'
+}
 
   return (
     <Router>
         <Routes>
           <Route element={<PrivateRounter/>}>
-            <Route path='/profile' element={<Profile/>} exact />
-            <Route path='/pets' element={<Pets/>} exact />
+            <Route path='/profile' element={<Profile dogData={dogData}/>} exact />
+            <Route path='/pets' element={<Pets dogData={dogData}/>} exact />
           </Route>
           <Route path='/' element={<Landing/>} exact />
           <Route path='/login' element={<Login/>} exact />

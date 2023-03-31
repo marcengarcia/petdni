@@ -6,18 +6,8 @@ import OtherData from '../Data/OtherData';
 import Footer from '../Data/Footer';
 import Header from '../Data/Header';
 
-const Pets = () => {
-    let dogData = {
-        name: 'Mollys',
-        age: '2 años',
-        race: 'Labrador',
-        sex: 'Hembra',
-        neutered: 'Si',
-        vaxxed: 'Si',
-        chipped: 'Si',
-        allergies: 'No',
-        other: 'No'
-    };
+const Pets = (props) => {
+
 
     let humanData = {
         name: 'Marcelus',
@@ -45,11 +35,11 @@ const Pets = () => {
             <div className="header"><Header /></div>
 
             <div className="slider-component" >
-                <DogPictures dogData={dogData} />
+                <DogPictures dogData={props.dogData} />
                 <div className='dog-name'>{ }</div>
             </div>
             <div className="content">
-                <div className="dog-data"><DogData dogData={dogData} /></div>
+                <div className="dog-data"><DogData dogData={props.dogData} /></div>
                 <div className="human-data"><HumanData humanData={humanData} /></div>
                 <div className="other-data"><OtherData otherData={otherData} /></div>
             </div>
