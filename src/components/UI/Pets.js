@@ -15,6 +15,7 @@ const Pets = () => {
         neutered: 'Si',
         vaxxed: 'Si',
         chipped: 'Si',
+        allergies: 'No',
         other: 'No'
     };
 

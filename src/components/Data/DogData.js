@@ -52,6 +52,12 @@ const DogData = (props) => {
                     </tr>
                     <tr>
                         <td class="highlight"><div></div></td>
+                        <td>Alergias:</td>
+                        <td className='value'>{props.dogData?.alergies}</td>
+                        <td class="highlight"><div></div></td>
+                    </tr>
+                    <tr>
+                        <td class="highlight"><div></div></td>
                         <td>Otro:</td>
                         <td className='value'>{props.dogData?.other}</td>
                         <td class="highlight"><div></div></td>
