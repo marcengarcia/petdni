@@ -53,3 +53,10 @@ nav ul li a .text {
     transform: translateY(100%);
     opacity: 0;
 }
+nav ul li.active a .icon {
+    position: absolute;
+    display: block;
+    font-size: 24px;
+    text-align: center;
+    justify-content: center;
+}

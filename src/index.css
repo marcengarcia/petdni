@@ -9,7 +9,7 @@ html {
 }
 
 body {
-  background-color: #3f3f3f;
+  background-color: var(--clr2);
 }
 
 :root {

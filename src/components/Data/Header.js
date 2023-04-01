@@ -7,15 +7,16 @@ import { Link } from 'react-router-dom'
 
 
 const Header = () => {
-    const [activeIcon, setActiveIcon] = useState('')
+    const [activeIcon, setActiveIcon] = useState()
 
     const handleIconClick = (iconName) => {
         setActiveIcon(iconName)
-    };
+    }
+    
     return (
-        <nav >
+        <nav className='nav'>
             <ul>
-                <li onClick={() => handleIconClick('faPaw')} className={activeIcon === 'faPaw' ? 'active' : ''} >
+                <li onClick={() => handleIconClick('faPaw')} className={activeIcon === 'faPaw' ? 'faPaw active' : ''} >
                     <Link to='/pets'>
                         <span className='icon' >
                             <FontAwesomeIcon icon={faPaw} />
@@ -39,7 +40,6 @@ const Header = () => {
                         <span className='text'>Salir</span>
                     </Link>
                 </li>
-                <div className='indicator'></div>
             </ul>
         </nav>
     )
