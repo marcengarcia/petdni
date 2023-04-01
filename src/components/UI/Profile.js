@@ -13,7 +13,7 @@ const Profile = (props) => {
                 <div className='accordion'>
                     <div className="dog-data">
                         <input type="radio" name="accordion" id="first" defaultChecked />
-                        <label htmlFor="first">datos del perruno!</label>
+                        <label htmlFor="first">Actualizar datos de la mascota</label>
                         <div className='content'>
                             <table>
                                 <tr>
@@ -58,7 +58,7 @@ const Profile = (props) => {
                     </div>
                     <div className='human-data'>
                         <input type="radio" name="accordion" id="second" />
-                        <label htmlFor="second">datos del humano</label>
+                        <label htmlFor="second">Actualizar datos del dueño</label>
                         <div className='content'>
                             <table>
                                 <tr>
@@ -91,7 +91,7 @@ const Profile = (props) => {
                     </div>
                     <div className='other-data'>
                         <input type="radio" name="accordion" id="third" />
-                        <label htmlFor="third">otros datos</label>
+                        <label htmlFor="third">Actualizar otros datos</label>
                         <div className='content'>
                             <table className='content-table'>
                                 <thead >

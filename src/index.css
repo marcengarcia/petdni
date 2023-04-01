@@ -45,9 +45,9 @@ table td:last-child {
 tr input {
   text-align: center;
   margin: 2px;
-  background-color: transparent;
+  background-color: var(--clr1);
   border-radius: 15px;
-  color: var(--clr1);
+  color: var(--clr4);
 }
 
 .card {
