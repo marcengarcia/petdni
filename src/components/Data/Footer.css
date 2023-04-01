@@ -6,7 +6,7 @@ footer {
     height: 50px;
     background: #2a2a2a;
     border-radius: 10px;
-
+    border: 1px solid white;
 }
 
 .footer-container {

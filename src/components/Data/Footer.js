@@ -5,7 +5,7 @@ const Footer = (props) => {
         <footer>
             
             <div className='footer-container'>
-                <div href="https://test.com">Nombre de empresa copada</div>
+                <div href="https://test.com">PetDNI</div>
                 <div>&copy; 2023 empresa copada.</div>
             </div>
         </footer>

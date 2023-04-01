@@ -1,5 +1,6 @@
 nav {
     background-color: var(--clr4);
+    height: 50px;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -9,7 +10,6 @@ nav {
 
 nav ul {
     display: flex;
-    
     justify-content: space-between;
     align-items: center;
     list-style: none;
@@ -26,20 +26,30 @@ nav li {
 
 nav a {
     display: flex;
-    flex-direction: column;
+    flex-direction: column-reverse;
     align-items: center;
     justify-content: center;
     text-decoration: none;
     color: var(--clr3);
     font-size: 14px;
+    position: relative;
 }
 
-nav .icon {
+nav ul li a .icon {
+    position: absolute;
+    display: block;
     font-size: 24px;
-    color: var(--clr3);
-    transition: 0.5s;
+    text-align: center;
+    justify-content: center;
+    color: var(--clr1);
 }
 
-nav ul li.active {
+nav ul li a .text {
+    
+    text-align: center;
+    justify-content: center;
+    transition: 0.5s;
     color: var(--clr1);
+    transform: translateY(100%);
+    opacity: 0;
 }
