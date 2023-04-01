@@ -7,12 +7,12 @@ const OtherData = (props) => {
             <input type="radio" name="accordion" id="third" />
             <label for="third">otros datos</label>
             <div className='content'>
-                <table className='content-table'>
-                    <tr className='table-header'>
-                        <th>Mas informacion util:</th>
+                <table>
+                    <tr>
+                        <td>Mas informacion util:</td>
                     </tr>
                     <tr>
-                        <td className='value'>{props.otherData?.otherInfo}</td>
+                        <textarea>{props.otherData?.otherInfo}</textarea>
                     </tr>
                 </table>
             </div>

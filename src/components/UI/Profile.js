@@ -13,14 +13,12 @@ const Profile = (props) => {
                 <div className='accordion'>
                     <div className="dog-data">
                         <input type="radio" name="accordion" id="first" defaultChecked />
-                        <label for="first">datos del perruno!</label>
+                        <label htmlFor="first">datos del perruno!</label>
                         <div className='content'>
                             <table>
                                 <tr>
                                     <td>Nombre:</td>
-                                    <td className='value'>
-                                        <input type="text" defaultValue={props.dogData?.name} />
-                                    </td>
+                                    <input type="text" defaultValue={props.dogData?.name} />
                                 </tr>
                                 <tr>
                                     <td>Edad:</td>
@@ -57,11 +55,10 @@ const Profile = (props) => {
                             </table>
                             <button className="save-data">Guardar</button>
                         </div>
-
                     </div>
                     <div className='human-data'>
                         <input type="radio" name="accordion" id="second" />
-                        <label for="second">datos del humano</label>
+                        <label htmlFor="second">datos del humano</label>
                         <div className='content'>
                             <table>
                                 <tr>
@@ -92,10 +89,9 @@ const Profile = (props) => {
                             <button className="save-data">Guardar</button>
                         </div>
                     </div>
-
                     <div className='other-data'>
                         <input type="radio" name="accordion" id="third" />
-                        <label for="third">otros datos</label>
+                        <label htmlFor="third">otros datos</label>
                         <div className='content'>
                             <table className='content-table'>
                                 <thead >

@@ -29,7 +29,25 @@ label {
 table {
   color: black;
   background-color: white;
+  width: 100%;
   border-collapse: collapse;
+  
+}
+
+table td:first-child {
+  text-align: left;
+}
+
+table td:last-child {
+  text-align: right;
+}
+
+tr input {
+  text-align: center;
+}
+
+.input-td {
+  text-align: right;
 }
 
 .card {
@@ -66,40 +84,6 @@ table {
   grid-column: 1;
 }
 
-tr:hover td {
-  cursor: pointer;
-  color: black;
-  font-weight: bold;
-  border-top: 1px solid black;
-  border-bottom: 1px solid black;
-}
-
-td.highlight {
-  padding: 0;
-  width: 10px;
-}
-
-td.highlight div {
-  width: 4px;
-  height: 30px;
-  border-radius: 4px;
-  background-color: white;
-  transition: all 0.2s ease-in-out;
-}
-
-td.value {
-  padding: 2px 50px;
-}
-
-tr:hover {
-  box-shadow: 10px 9px 4px -6px grey;
-}
-
-tr:hover td.highlight div {
-  transform: scaleX(3);
-  background-color: white;
-}
-
 .dog-data {
   grid-area: 2/2/-1/-1;
 }
@@ -110,12 +94,11 @@ tr:hover td.highlight div {
 
 .other-data {
   grid-area: 4/2/-1/-1;
+  
 }
-
-.content {
-  margin: 0;
-  padding: 0;
-  max-width: 400px;
+.other-data textarea {
+  resize: none;
+  width: 100%;
 }
 
 .dog-data,
