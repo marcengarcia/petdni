@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 
-import Pets from './components/UI/Pets';
+import PetsView from './components/UI/PetsView';
 import Profile from './components/UI/Profile';
 import Login from './components/UI/Login';
 import Register from './components/UI/Register';
@@ -43,7 +43,7 @@ const App = () => {
       <Routes>
         <Route element={<PrivateRounter />}>
           <Route path='/profile' element={<Profile dogData={dogData} humanData={humanData} otherData={otherData} />} exact />
-          <Route path='/pets' element={<Pets dogData={dogData} humanData={humanData} otherData={otherData} />} exact />
+          <Route path='/pets' element={<PetsView dogData={dogData} humanData={humanData} otherData={otherData} />} exact />
         </Route>
         <Route path='/' element={<Login />} exact />
         <Route path='/login' element={<Login />} exact />
