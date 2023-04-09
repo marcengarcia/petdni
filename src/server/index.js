@@ -37,25 +37,48 @@ app.get('/users/create', (req, res) => {
   res.send('exito')
 })
 
+// app.get('/pets/create', (req, res) => {
+//   Pet.create({
+//     name: 'Molly',
+//     age: 3,
+//     breed: 'Labrador',
+//     sex: 'Hembra',
+//     neutered: 'Si',
+//     vaxxed: 'Si',
+//     chipped: 'Si',
+//     allergies: 'No',
+//     diet: 'BARF',
+//     other: 'Amarilla',
+//     other_info: 'Dieta fisiologica natural (800gs)',
+//     owner_id: 1,
+//   }).catch((err) => {
+//     if (err) {
+//       console.log(err)
+//     }
+//   })
+//   res.send('molly exito')
+// })
+
 app.get('/pets/create', (req, res) => {
   Pet.create({
-    name: 'Molly',
-    age: 3,
-    breed: 'Labrador',
+    name: 'Mia',
+    age: 2,
+    breed: 'Border Collie',
     sex: 'Hembra',
     neutered: 'Si',
     vaxxed: 'Si',
     chipped: 'Si',
     allergies: 'No',
     diet: 'BARF',
-    other: 'Amarilla',
+    other: 'Azul Merle',
+    other_info: 'Dieta fisiologica natural (500gs)',
     owner_id: 1,
   }).catch((err) => {
     if (err) {
       console.log(err)
     }
   })
-  res.send('doggo exito')
+  res.send('mia exito')
 })
 
 app.get('/pets/:id', (req, res) => {
@@ -72,7 +95,26 @@ app.get('/pets/:id', (req, res) => {
           chipped: pet.chipped,
           allergies: pet.allergies,
           diet: pet.diet,
-          other: pet.other
+          other: pet.other,
+          other_info: pet.other_info
+        }
+        res.json(petData)
+      } else {
+        res.status(404).json({ message: 'Pet not found' })
+      }
+    })
+    .catch((err) => {
+      console.log(err)
+      res.status(500).json({ message: 'Server error' })
+    })
+})
+
+app.get(`/other-info/:id`, (req, res) => {
+  Pet.findByPk(req.params.id)
+    .then((pet) => {
+      if (pet) {
+        let petData = {
+          other_info: pet.other_info
         }
         res.json(petData)
       } else {

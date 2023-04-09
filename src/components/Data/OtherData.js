@@ -12,7 +12,7 @@ const OtherData = (props) => {
                         <td>Mas informacion util:</td>
                     </tr>
                     <tr>
-                        <textarea cols="30" rows="9" readOnly>{props.otherData?.otherInfo}</textarea>
+                        <textarea cols="30" rows="9" readOnly>{props.otherInfo?.other_info}</textarea>
                     </tr>
                 </table>
             </div>

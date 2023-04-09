@@ -22,6 +22,7 @@ const App = () => {
     other: ''
   })
 
+
   useEffect(() => {
     fetch('http://localhost:3001/pets/1')
       .then((response) => response.json())
@@ -51,20 +52,27 @@ const App = () => {
       .catch((error) => console.error(error))
   }, [])
 
-  const otherData = {
-    otherInfo: 'Aca iria un text area read only con info que los dueños crean que es importante y no esta en los campos de las tablas',
-  }
+const [otherInfo, setOtherInfo] = useState({
+  other_info: '',
+})
 
-
-
-
+useEffect(() => {
+  fetch('http://localhost:3001/other-info/1')
+    .then((response) => response.json())
+    .then((data) => {
+      setOtherInfo(data)
+      console.log(data)
+      
+    })
+    .catch((error) => console.error(error))
+}, [])
 
   return (
     <Router>
       <Routes>
         <Route element={<PrivateRounter />}>
-          <Route path='/profile' element={<Profile petData={petData} humanData={humanData} otherData={otherData} />} exact />
-          <Route path='/pets' element={<PetsView petData={petData} humanData={humanData} otherData={otherData} />} exact />
+          <Route path='/profile' element={<Profile petData={petData} humanData={humanData} otherInfo={otherInfo} />} exact />
+          <Route path='/pets' element={<PetsView petData={petData} humanData={humanData} otherInfo={otherInfo} />} exact />
         </Route>
         <Route path='/' element={<Login />} exact />
         <Route path='/login' element={<Login />} exact />

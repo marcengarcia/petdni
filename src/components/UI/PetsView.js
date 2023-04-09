@@ -8,19 +8,6 @@ import Header from '../data/Header';
 
 const Pets = (props) => {
 
-
-
-
-
-
-    // const [petData, setpetData] = useState(null);
-
-    // useEffect(() => {
-    //     fetch('/api/dogs/1').then((response) => response.json()).then((json) => {
-    //         setpetData( json )
-    //     })
-    // }, []);
-
     return (
         <div className="card">
             <div className="header"><Header /></div>
@@ -32,7 +19,7 @@ const Pets = (props) => {
             <div className="content">
                 <div className="dog-data"><PetData petData={props.petData} /></div>
                 <div className="human-data"><HumanData humanData={props.humanData} /></div>
-                <div className="other-data"><OtherData otherData={props.otherData} /></div>
+                <div className="other-data"><OtherData otherInfo={props.otherInfo} /></div>
             </div>
             <div className="footer"><Footer /></div>
         </div>

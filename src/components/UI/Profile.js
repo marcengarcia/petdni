@@ -101,7 +101,7 @@ const Profile = (props) => {
                                     <tbody>
                                         <tr>
                                             <td className='value'>
-                                                <textarea cols="30" rows="7">{props.otherData?.otherInfo}</textarea>
+                                                <textarea cols="30" rows="7">{props.otherInfo}</textarea>
                                             </td>
                                         </tr>
                                     </tbody>

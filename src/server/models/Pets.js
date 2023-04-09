@@ -73,7 +73,7 @@ module.exports = (sequelize, DataTypes) => {
                 notEmpty: true
             }
         },
-        other_data: {
+        other_info: {
             type: DataTypes.STRING,
             allowNull: true,
             validate: {
