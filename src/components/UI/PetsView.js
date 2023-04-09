@@ -1,6 +1,6 @@
 import "./PetsView.css"
-import DogPictures from '../data/DogPictures';
-import DogData from '../data/DogData';
+import DogPictures from '../data/PetPictures';
+import PetData from '../data/PetData';
 import HumanData from '../data/HumanData';
 import OtherData from '../data/OtherData';
 import Footer from '../data/Footer';
@@ -30,7 +30,7 @@ const Pets = (props) => {
                 <div className='dog-name'>{ }</div>
             </div>
             <div className="content">
-                <div className="dog-data"><DogData dogData={props.dogData} /></div>
+                <div className="dog-data"><PetData dogData={props.dogData} /></div>
                 <div className="human-data"><HumanData humanData={props.humanData} /></div>
                 <div className="other-data"><OtherData otherData={props.otherData} /></div>
             </div>

@@ -1,10 +1,10 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 
-import PetsView from './components/UI/PetsView';
-import Profile from './components/UI/Profile';
-import Login from './components/UI/Login';
-import Register from './components/UI/Register';
+import PetsView from './components/UI/PetsView'
+import Profile from './components/UI/Profile'
+import Login from './components/UI/Login'
+import Register from './components/UI/Register'
 import PrivateRounter from './components/utils/PrivateRouter'
 
 
@@ -27,7 +27,7 @@ let humanData = {
   phone: '+54 123456789',
   instagram: '@marcengarcia',
   twitter: '@marcengarcia',
-  Facebook: '@marcengarcia',
+  facebook: '@marcengarcia',
   other: ''
 }
 
@@ -36,7 +36,7 @@ let otherData = {
 }
 
 const App = () => {
-
+  
   
   return (
     <Router>
@@ -53,4 +53,4 @@ const App = () => {
   )
 }
 
-export default App;
+export default App

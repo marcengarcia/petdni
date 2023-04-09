@@ -14,10 +14,6 @@ db.sequelize.sync().then((req) => {
     })
 })
 
-app.get('/select', (req, res) => {
-    res.send('select')
-})
-
 app.get('/users/create', (req, res) => {
     User.create({
         first_name: 'Marce',
@@ -39,6 +35,26 @@ app.get('/users/create', (req, res) => {
     res.send('exito')
 })
 
-app.get('/delete', (req, res) => {
-    res.send('delete')
-})
+app.get('/users/:email', async (req, res) => {
+    try {
+      const user = await User.findOne({ where: { email: req.params.email } })
+      if (user) {
+        const { first_name, last_name, phone, instagram, twitter, facebook, other } = user
+        const humanData = {
+          name: `${first_name}`,
+          phone,
+          instagram,
+          twitter,
+          Facebook: facebook,
+          other,
+        }
+        res.json(humanData)
+      } else {
+        res.status(404).json({ message: 'User not found' })
+      }
+    } catch (error) {
+      console.log(error)
+      res.status(500).json({ message: 'Server error' })
+    }
+  })
+  
