@@ -3,8 +3,10 @@ const app = express()
 const PORT = process.env.PORT || 3001
 const db = require('./models')
 
+const cors = require('cors')
 const { User, Pet } = require('./models')
 
+app.use(cors())
 app.get('/', (req, res) => {
   res.send('Holis, soy tu server =)')
 })
@@ -46,7 +48,7 @@ app.get('/pets/create', (req, res) => {
     chipped: 'Si',
     allergies: 'No',
     diet: 'BARF',
-    other: '@marcengarcia',
+    other: 'Amarilla',
     owner_id: 1,
   }).catch((err) => {
     if (err) {
@@ -56,11 +58,29 @@ app.get('/pets/create', (req, res) => {
   res.send('doggo exito')
 })
 
-app.get('/pet-info/:id', async (req, res) => {
-  try {
-    const pet = await Pet.findByPk(req.params.id)
-    res.json(pet)
-  } catch (error) {
-    console.error(error)
-  }
+app.get('/pets/:id', (req, res) => {
+  Pet.findByPk(req.params.id)
+    .then((pet) => {
+      if (pet) {
+        let petData = {
+          name: pet.name,
+          age: pet.age,
+          breed: pet.breed,
+          sex: pet.sex,
+          neutered: pet.neutered,
+          vaxxed: pet.vaxxed,
+          chipped: pet.chipped,
+          allergies: pet.allergies,
+          diet: pet.diet,
+          other: pet.other
+        }
+        res.json(petData)
+      } else {
+        res.status(404).json({ message: 'Pet not found' })
+      }
+    })
+    .catch((err) => {
+      console.log(err)
+      res.status(500).json({ message: 'Server error' })
+    })
 })
