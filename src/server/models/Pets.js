@@ -2,7 +2,7 @@ const { DataTypes } = require("sequelize");
 const { sequelize } = require(".");
 
 module.exports = (sequelize, DataTypes) => {
-    const User = sequelize.define("User", {
+    const Pet = sequelize.define("Pet", {
         name: {
             type: DataTypes.STRING,
             allowNull: false,
@@ -10,66 +10,78 @@ module.exports = (sequelize, DataTypes) => {
                 notEmpty: true
             }
         },
-        last_name: {
-            type: DataTypes.STRING,
-            allowNull: false,
-            validate: {
-                notEmpty: true
-            }
-        },
-        email: {
-            type: DataTypes.STRING,
-            allowNull: false,
-            validate: {
-                notEmpty: true
-            }
-        },
-        password: {
-            type: DataTypes.STRING,
-            allowNull: false,
-            validate: {
-                notEmpty: true
-            }
-        },
-        admin: {
-            type: DataTypes.BOOLEAN,
-            allowNull: false,
-            validate: {
-                notEmpty: true
-            }
-        },
-        active: {
-            type: DataTypes.BOOLEAN,
-            allowNull: false,
-            validate: {
-                notEmpty: true
-            }
-        },
-        phone: {
+        age: {
             type: DataTypes.INTEGER,
             allowNull: false,
             validate: {
                 notEmpty: true
             }
         },
-        instagram: {
+        breed: {
             type: DataTypes.STRING,
-            allowNull: true,
+            allowNull: false,
+            validate: {
+                notEmpty: true
+            }
         },
-        twitter: {
+        sex: {
             type: DataTypes.STRING,
-            allowNull: true,
+            allowNull: false,
+            validate: {
+                notEmpty: true
+            }
         },
-        facebook: {
+        neutered: {
+            type: DataTypes.BOOLEAN,
+            allowNull: false,
+            validate: {
+                notEmpty: true
+            }
+        },
+        vaxxed: {
+            type: DataTypes.BOOLEAN,
+            allowNull: false,
+            validate: {
+                notEmpty: true
+            }
+        },
+        chipped: {
+            type: DataTypes.INTEGER,
+            allowNull: false,
+            validate: {
+                notEmpty: true
+            }
+        },
+        allergies: {
             type: DataTypes.STRING,
-            allowNull: true,
+            allowNull: false,
+            validate: {
+                notEmpty: true
+            }
+        },
+        diet: {
+            type: DataTypes.STRING,
+            allowNull: false,
+            validate: {
+                notEmpty: true
+            }
         },
         other: {
             type: DataTypes.STRING,
             allowNull: true,
+            validate: {
+                notEmpty: true
+            }
+        },
+        owner_id: {
+            type: DataTypes.INTEGER,
+            allowNull: false,
+            validate: {
+                notEmpty: true
+            }
         },
     }
     );
 
-    return User
+    return Pet
 }
