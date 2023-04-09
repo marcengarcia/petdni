@@ -18,6 +18,7 @@ let dogData = {
   vaxxed: 'Si',
   chipped: 'Si',
   allergies: 'No',
+  diet: 'BARF',
   other: 'No'
 }
 
