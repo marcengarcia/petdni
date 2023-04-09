@@ -1,6 +1,6 @@
 import './PetData.css'
 
-const DogData = (props) => {
+const petData = (props) => {
 
     return (
         <div className='accordion'>
@@ -10,43 +10,43 @@ const DogData = (props) => {
                 <table>
                     <tr>
                         <td>Nombre:</td>
-                        <td className='value'>{props.dogData?.name}</td>
+                        <td className='value'>{props.petData?.name}</td>
                     </tr>
                     <tr>
                         <td>Edad:</td>
-                        <td className='value'>{props.dogData?.age}</td>
+                        <td className='value'>{props.petData?.age}</td>
                     </tr>
                     <tr>
                         <td>Raza:</td>
-                        <td className='value'>{props.dogData?.breed}</td>
+                        <td className='value'>{props.petData?.breed}</td>
                     </tr>
                     <tr>
                         <td>Sexo:</td>
-                        <td className='value'>{props.dogData?.sex}</td>
+                        <td className='value'>{props.petData?.sex}</td>
                     </tr>
                     <tr>
                         <td>Castrada:</td>
-                        <td className='value'>{props.dogData?.neutered}</td>
+                        <td className='value'>{props.petData?.neutered}</td>
                     </tr>
                     <tr>
                         <td>Vacunas al Dia:</td>
-                        <td className='value'>{props.dogData?.vaxxed}</td>
+                        <td className='value'>{props.petData?.vaxxed}</td>
                     </tr>
                     <tr>
                         <td>Chippeada:</td>
-                        <td className='value'>{props.dogData?.chipped}</td>
+                        <td className='value'>{props.petData?.chipped}</td>
                     </tr>
                     <tr>
                         <td>Alergias:</td>
-                        <td className='value'>{props.dogData?.allergies}</td>
+                        <td className='value'>{props.petData?.allergies}</td>
                     </tr>
                     <tr>
                         <td>Dieta:</td>
-                        <td className='value'>{props.dogData?.diet}</td>
+                        <td className='value'>{props.petData?.diet}</td>
                     </tr>
                     <tr>
                         <td>Otro:</td>
-                        <td className='value'>{props.dogData?.other}</td>
+                        <td className='value'>{props.petData?.other}</td>
                     </tr>
                 </table>
             </div >
@@ -54,4 +54,4 @@ const DogData = (props) => {
     )
 }
 
-export default DogData
+export default petData

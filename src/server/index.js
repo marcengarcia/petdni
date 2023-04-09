@@ -55,3 +55,12 @@ app.get('/pets/create', (req, res) => {
   })
   res.send('doggo exito')
 })
+
+app.get('/pet-info/:id', async (req, res) => {
+  try {
+    const pet = await Pet.findByPk(req.params.id)
+    res.json(pet)
+  } catch (error) {
+    console.error(error)
+  }
+})

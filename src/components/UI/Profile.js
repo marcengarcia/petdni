@@ -18,39 +18,39 @@ const Profile = (props) => {
                             <table>
                                 <tr>
                                     <td>Nombre:</td>
-                                    <input type="text" defaultValue={props.dogData?.name} />
+                                    <input type="text" defaultValue={props.petData?.name} />
                                 </tr>
                                 <tr>
                                     <td>Edad:</td>
-                                    <input type="text" defaultValue={props.dogData?.age} />
+                                    <input type="text" defaultValue={props.petData?.age} />
                                 </tr>
                                 <tr>
                                     <td>Raza:</td>
-                                    <input type="text" defaultValue={props.dogData?.breed} />
+                                    <input type="text" defaultValue={props.petData?.breed} />
                                 </tr>
                                 <tr>
                                     <td>Sexo:</td>
-                                    <input type="text" defaultValue={props.dogData?.sex} />
+                                    <input type="text" defaultValue={props.petData?.sex} />
                                 </tr>
                                 <tr>
                                     <td>Castrada:</td>
-                                    <input type="text" defaultValue={props.dogData?.neutered} />
+                                    <input type="text" defaultValue={props.petData?.neutered} />
                                 </tr>
                                 <tr>
                                     <td>Vacunas al Dia:</td>
-                                    <input type="text" defaultValue={props.dogData?.vaxxed} />
+                                    <input type="text" defaultValue={props.petData?.vaxxed} />
                                 </tr>
                                 <tr>
                                     <td>Chippeada:</td>
-                                    <input type="text" defaultValue={props.dogData?.chipped} />
+                                    <input type="text" defaultValue={props.petData?.chipped} />
                                 </tr>
                                 <tr>
                                     <td>Alergias:</td>
-                                    <input type="text" defaultValue={props.dogData?.allergies} />
+                                    <input type="text" defaultValue={props.petData?.allergies} />
                                 </tr>
                                 <tr>
                                     <td>Otro:</td>
-                                    <input type="text" defaultValue={props.dogData?.other} />
+                                    <input type="text" defaultValue={props.petData?.other} />
                                 </tr>
                             </table>
                             <button className="save-data">Guardar</button>

@@ -13,11 +13,11 @@ const Pets = (props) => {
 
 
 
-    // const [dogData, setDogData] = useState(null);
+    // const [petData, setpetData] = useState(null);
 
     // useEffect(() => {
     //     fetch('/api/dogs/1').then((response) => response.json()).then((json) => {
-    //         setDogData( json )
+    //         setpetData( json )
     //     })
     // }, []);
 
@@ -26,11 +26,11 @@ const Pets = (props) => {
             <div className="header"><Header /></div>
 
             <div className="slider-component" >
-                <DogPictures dogData={props.dogData} />
+                <DogPictures petData={props.petData} />
                 <div className='dog-name'>{ }</div>
             </div>
             <div className="content">
-                <div className="dog-data"><PetData dogData={props.dogData} /></div>
+                <div className="dog-data"><PetData petData={props.petData} /></div>
                 <div className="human-data"><HumanData humanData={props.humanData} /></div>
                 <div className="other-data"><OtherData otherData={props.otherData} /></div>
             </div>

@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import Axios from 'axios'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 
 import PetsView from './components/UI/PetsView'
@@ -9,7 +10,7 @@ import PrivateRounter from './components/utils/PrivateRouter'
 
 
 
-let dogData = {
+let petData = {
   name: 'Mollys',
   age: '2 años',
   breed: 'Labrador',
@@ -36,14 +37,14 @@ let otherData = {
 }
 
 const App = () => {
-  
+
   
   return (
     <Router>
       <Routes>
         <Route element={<PrivateRounter />}>
-          <Route path='/profile' element={<Profile dogData={dogData} humanData={humanData} otherData={otherData} />} exact />
-          <Route path='/pets' element={<PetsView dogData={dogData} humanData={humanData} otherData={otherData} />} exact />
+          <Route path='/profile' element={<Profile petData={petData} humanData={humanData} otherData={otherData} />} exact />
+          <Route path='/pets' element={<PetsView petData={petData} humanData={humanData} otherData={otherData} />} exact />
         </Route>
         <Route path='/' element={<Login />} exact />
         <Route path='/login' element={<Login />} exact />
