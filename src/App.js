@@ -24,7 +24,7 @@ const App = () => {
 
 
   useEffect(() => {
-    fetch('http://localhost:3001/pets/1')
+    fetch('http://localhost:3001/pets/2')
       .then((response) => response.json())
       .then((data) => {
         setPetData(data)
@@ -57,7 +57,7 @@ const [otherInfo, setOtherInfo] = useState({
 })
 
 useEffect(() => {
-  fetch('http://localhost:3001/other-info/1')
+  fetch('http://localhost:3001/other-info/2')
     .then((response) => response.json())
     .then((data) => {
       setOtherInfo(data)

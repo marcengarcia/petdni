@@ -94,18 +94,14 @@ const Profile = (props) => {
                         <label htmlFor="third">Actualizar otros datos</label>
                         <div className='content'>
                             <table className='content-table'>
-                                <thead >
-                                    <tr className='table-header'>
-                                        <th>Mas informacion util:</th>
-                                    </tr>
-                                    <tbody>
-                                        <tr>
-                                            <td className='value'>
-                                                <textarea cols="30" rows="7">{props.otherInfo}</textarea>
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </thead>
+                                <tr className='table-header'>
+                                    <th>Mas informacion util:</th>
+                                </tr>
+                                <tr>
+                                    <td className='value'>
+                                        <textarea cols="90" rows="7">{props.otherInfo}</textarea>
+                                    </td>
+                                </tr>
                                 <button className="save-data">Guardar</button>
                             </table>
                         </div>
