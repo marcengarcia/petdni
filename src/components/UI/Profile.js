@@ -1,7 +1,7 @@
 import "./Profile.css"
-import Footer from '../Data/Footer';
-import Header from '../Data/Header';
-import Slider from "../Data/Slider";
+import Footer from '../data/Footer';
+import Header from '../data/Header';
+import Slider from "../data/Slider";
 
 
 const Profile = (props) => {

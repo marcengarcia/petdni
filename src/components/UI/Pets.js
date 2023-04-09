@@ -1,10 +1,10 @@
 import "./Pets.css"
-import DogPictures from '../Data/DogPictures';
-import DogData from '../Data/DogData';
-import HumanData from '../Data/HumanData';
-import OtherData from '../Data/OtherData';
-import Footer from '../Data/Footer';
-import Header from '../Data/Header';
+import DogPictures from '../data/DogPictures';
+import DogData from '../data/DogData';
+import HumanData from '../data/HumanData';
+import OtherData from '../data/OtherData';
+import Footer from '../data/Footer';
+import Header from '../data/Header';
 
 const Pets = (props) => {
 
