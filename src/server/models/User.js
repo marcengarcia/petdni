@@ -32,14 +32,14 @@ module.exports = (sequelize, DataTypes) => {
             }
         },
         admin: {
-            type: DataTypes.STRING,
+            type: DataTypes.BOOLEAN,
             allowNull: false,
             validate: {
                 notEmpty: true
             }
         },
         active: {
-            type: DataTypes.STRING,
+            type: DataTypes.BOOLEAN,
             allowNull: false,
             validate: {
                 notEmpty: true
