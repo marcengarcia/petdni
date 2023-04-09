@@ -22,21 +22,8 @@ const App = () => {
     other: ''
   })
 
-  const humanData = {
-    name: 'Marcelus',
-    phone: '+54 123456789',
-    instagram: '@marcengarcia',
-    twitter: '@marcengarcia',
-    facebook: '@marcengarcia',
-    other: ''
-  }
-
-  const otherData = {
-    otherInfo: 'Aca iria un text area read only con info que los dueños crean que es importante y no esta en los campos de las tablas',
-  }
-
   useEffect(() => {
-    fetch('http://localhost:3001/pets/2')
+    fetch('http://localhost:3001/pets/1')
       .then((response) => response.json())
       .then((data) => {
         setPetData(data)
@@ -44,6 +31,33 @@ const App = () => {
       })
       .catch((error) => console.error(error))
   }, [])
+
+  const [humanData, setHumanData] = useState({
+    name: '',
+    phone: '',
+    instagram: '',
+    twitter: '',
+    facebook: '',
+    other: ''
+  })
+
+  useEffect(() => {
+    fetch('http://localhost:3001/users/marcengarcia@gmail.com')
+      .then((response) => response.json())
+      .then((data) => {
+        setHumanData(data)
+        console.log(data)
+      })
+      .catch((error) => console.error(error))
+  }, [])
+
+  const otherData = {
+    otherInfo: 'Aca iria un text area read only con info que los dueños crean que es importante y no esta en los campos de las tablas',
+  }
+
+
+
+
 
   return (
     <Router>

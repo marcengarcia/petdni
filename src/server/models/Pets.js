@@ -73,6 +73,13 @@ module.exports = (sequelize, DataTypes) => {
                 notEmpty: true
             }
         },
+        other_data: {
+            type: DataTypes.STRING,
+            allowNull: true,
+            validate: {
+                notEmpty: true
+            }
+        },
         owner_id: {
             type: DataTypes.INTEGER,
             allowNull: false,

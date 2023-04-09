@@ -84,3 +84,26 @@ app.get('/pets/:id', (req, res) => {
       res.status(500).json({ message: 'Server error' })
     })
 })
+
+app.get('/users/:email', (req, res) => {
+  User.findOne({ where: { email: req.params.email } })
+    .then((user) => {
+      if (user) {
+        let humanData = {
+          name: user.first_name,
+          phone: user.phone,
+          instagram: user.instagram,
+          twitter: user.twitter,
+          facebook: user.facebook,
+          other: user.other
+        }
+        res.json(humanData)
+      } else {
+        res.status(404).json({ message: 'User not found' })
+      }
+    })
+    .catch((err) => {
+      console.log(err)
+      res.status(500).json({ message: 'Server error' })
+    })
+})
