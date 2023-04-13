@@ -9,6 +9,16 @@ import Register from './components/UI/Register'
 import PrivateRounter from './components/utils/PrivateRouter'
 
 const App = () => {
+  const [pets, setPets] = useState([])
+  useEffect(() => {
+    fetch('http://localhost:3001/pets/user/1')
+    .then((response) => response.json())
+    .then((data) => {
+      setPets(data)
+      console.log(data)
+    })
+  }, [])
+
   const [petData, setPetData] = useState({
     name: '',
     age: '',
@@ -19,10 +29,9 @@ const App = () => {
     chipped: '',
     allergies: '',
     diet: '',
-    other: ''
+    other: '',
+    ownerId: ''
   })
-
-
   useEffect(() => {
     fetch('http://localhost:3001/pets/2')
       .then((response) => response.json())
@@ -71,7 +80,7 @@ useEffect(() => {
     <Router>
       <Routes>
         <Route element={<PrivateRounter />}>
-          <Route path='/profile' element={<Profile petData={petData} humanData={humanData} otherInfo={otherInfo} />} exact />
+          <Route path='/profile' element={<Profile petData={petData} humanData={humanData} otherInfo={otherInfo} pets={pets} />} exact />
           <Route path='/pets' element={<PetsView petData={petData} humanData={humanData} otherInfo={otherInfo} />} exact />
         </Route>
         <Route path='/' element={<Login />} exact />

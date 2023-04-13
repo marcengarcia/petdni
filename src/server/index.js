@@ -149,3 +149,21 @@ app.get('/users/:email', (req, res) => {
       res.status(500).json({ message: 'Server error' })
     })
 })
+
+app.get('/pets/user/:userId', async (req, res) => {
+  const userId = req.params.userId;
+
+  try {
+    const pets = await Pet.findAll({
+      where: {
+        owner_id: userId
+      }
+    });
+
+    res.json(pets);
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ message: 'Internal Server Error' })
+  }
+})
+
