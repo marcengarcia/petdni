@@ -16,26 +16,26 @@ db.sequelize.sync().then((req) => {
   })
 })
 
-app.get('/users/create', (req, res) => {
-  User.create({
-    first_name: 'Marce',
-    last_name: 'G',
-    email: 'marcengarcia@gmail.com',
-    password: 'test123',
-    admin: '1',
-    active: '1',
-    phone: '2915111033',
-    instagram: '@marcengarcia',
-    twitter: '@marcengarcia',
-    facebook: '@marcengarcia',
-    other: 'neh',
-  }).catch((err) => {
-    if (err) {
-      console.log(err)
-    }
-  })
-  res.send('exito')
-})
+// app.get('/users/create', (req, res) => {
+//   User.create({
+//     first_name: 'Marce',
+//     last_name: 'G',
+//     email: 'marcengarcia@gmail.com',
+//     password: 'test123',
+//     admin: '1',
+//     active: '1',
+//     phone: '2915111033',
+//     instagram: '@marcengarcia',
+//     twitter: '@marcengarcia',
+//     facebook: '@marcengarcia',
+//     other: 'neh',
+//   }).catch((err) => {
+//     if (err) {
+//       console.log(err)
+//     }
+//   })
+//   res.send('exito')
+// })
 
 // app.get('/pets/create', (req, res) => {
 //   Pet.create({
@@ -59,27 +59,27 @@ app.get('/users/create', (req, res) => {
 //   res.send('molly exito')
 // })
 
-app.get('/pets/create', (req, res) => {
-  Pet.create({
-    name: 'Mia',
-    age: 2,
-    breed: 'Border Collie',
-    sex: 'Hembra',
-    neutered: 'Si',
-    vaxxed: 'Si',
-    chipped: 'Si',
-    allergies: 'No',
-    diet: 'BARF',
-    other: 'Azul Merle',
-    other_info: 'Dieta fisiologica natural (500gs)',
-    owner_id: 1,
-  }).catch((err) => {
-    if (err) {
-      console.log(err)
-    }
-  })
-  res.send('mia exito')
-})
+// app.get('/pets/create', (req, res) => {
+//   Pet.create({
+//     name: 'Mia',
+//     age: 2,
+//     breed: 'Border Collie',
+//     sex: 'Hembra',
+//     neutered: 'Si',
+//     vaxxed: 'Si',
+//     chipped: 'Si',
+//     allergies: 'No',
+//     diet: 'BARF',
+//     other: 'Azul Merle',
+//     other_info: 'Dieta fisiologica natural (500gs)',
+//     owner_id: 1,
+//   }).catch((err) => {
+//     if (err) {
+//       console.log(err)
+//     }
+//   })
+//   res.send('mia exito')
+// })
 
 app.get('/pets/:id', (req, res) => {
   Pet.findByPk(req.params.id)
