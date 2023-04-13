@@ -1,5 +1,5 @@
-import React from "react";
-import "./PetPicker.css";
+import React from "react"
+import "./PetPicker.css"
 
 const PetPicker = (props) => {
     return (
@@ -10,7 +10,7 @@ const PetPicker = (props) => {
                 </button>
             ))}
         </div>
-    );
-};
+    )
+}
 
-export default PetPicker;
+export default PetPicker
