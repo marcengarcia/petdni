@@ -9,15 +9,11 @@ import PrivateRounter from './components/utils/PrivateRouter'
 
 const App = () => {
   const [pets, setPets] = useState([])
-  const [dataLength, setDataLength] = useState(0)
   useEffect(() => {
     fetch('http://localhost:3001/pets/user/1')
       .then((response) => response.json())
       .then((data) => {
         setPets(data)
-        setDataLength(data.length)
-        console.log(data)
-        console.log(data.length)
       })
   }, [])
 
@@ -82,7 +78,7 @@ const App = () => {
     <Router>
       <Routes>
         <Route element={<PrivateRounter />}>
-          <Route path='/profile' element={<Profile petData={petData} humanData={humanData} otherInfo={otherInfo} pets={pets} length={dataLength} />} exact />
+          <Route path='/profile' element={<Profile petData={petData} humanData={humanData} otherInfo={otherInfo} pets={pets} />} exact />
           <Route path='/pets' element={<PetsView petData={petData} humanData={humanData} otherInfo={otherInfo} />} exact />
         </Route>
         <Route path='/' element={<Login />} exact />
