@@ -2,13 +2,17 @@ import "./Profile.css"
 import Footer from '../data/Footer';
 import Header from '../data/Header';
 import Slider from "../data/Slider";
+import PetPicker from "../data/PetPicker";
 
 
 const Profile = (props) => {
     return (
-        <>
+        <div className="profile-container">
             <div className="card">
-                <div className="header"><Header /></div>
+                <div className="header">
+                    <Header />
+                    <PetPicker />
+                    </div>
                 <div className="carrousel"> <Slider /><p>AGREGAR IMAGEN</p></div>
                 <div className='accordion'>
                     <div className="dog-data">
@@ -109,7 +113,7 @@ const Profile = (props) => {
                 </div>
                 <div className="footer"> <Footer /></div>
             </div>
-        </>
+        </div>
     )
 }
 
