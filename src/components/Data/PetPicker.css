@@ -1,5 +1,5 @@
 .picker {
-    background-color: rebeccapurple;
+    background-color: var(--clr4);
     height: 50px;
     display: flex;
     justify-content: space-around;
@@ -13,6 +13,9 @@
 .picker .pet {
     width: 100px;
     height: 90%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 
