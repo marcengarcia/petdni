@@ -2,12 +2,17 @@
     background-color: rebeccapurple;
     height: 50px;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
     align-items: center;
     border-radius: 10px;
     border: 1px solid white;
     margin-top: 10px;
     margin-bottom: -20px;
+}
+
+.picker .pet {
+    width: 100px;
+    height: 90%;
 }
 
 
