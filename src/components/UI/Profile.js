@@ -8,7 +8,7 @@ import React, {useState} from "react";
 
 const Profile = (props) => {
     const [ownedPets, setOwnedPets ] = useState(props.pets)
-    console.log(ownedPets)
+
 
     return (
         <div className="profile-container">
